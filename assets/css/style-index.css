@@ -1,0 +1,12 @@
+body{
+    background-image: url(../../assets/images/woodFloor.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+#myCarousel img {
+    border-radius: 5px;
+    width: auto;  
+    height: 540px;   
+}
