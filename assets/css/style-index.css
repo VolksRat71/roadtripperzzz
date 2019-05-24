@@ -19,3 +19,10 @@ form{
     width: auto;  
     height: 320px;   
 }
+ .loadingGif{
+    margin-top: 85px;
+    margin-left:30%;
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+ }

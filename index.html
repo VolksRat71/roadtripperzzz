@@ -34,9 +34,10 @@
         </form>
     </nav>
 
-
-
-
+    <!-- JavaScript DOM Hide on Load -->
+    <div class="loadingScreen">
+        <img class="loadingGif" src="assets/images/loading.gif">
+    </div>
 
     <!-- Form -->
     <div id="form" class="container">
@@ -84,11 +85,11 @@
                         </div>
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                    <label class="form-check-label" for="invalidCheck">Email My Results</label>
+                                <input class="form-check-input" type="checkbox" value="" required>
+                                    <label class="form-check-label">Email My Results</label>
                             </div>
                         </div>
-                        <button class="btn btn-outline-light" type="submit">Randomize My Adventure!</button>
+                        <button id="loadButton" class="btn btn-outline-light" type="submit">Randomize My Adventure!</button>
                     </form>             
                 </div>
             </div>
