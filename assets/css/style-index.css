@@ -5,8 +5,17 @@ body{
     background-attachment: fixed;
 }
 
+#form{
+    margin-top: 90px;
+    margin-bottom: 15px;
+}
+
+form{
+    padding: 10px;
+}
+
 #myCarousel img {
     border-radius: 5px;
     width: auto;  
-    height: 540px;   
+    height: 320px;   
 }

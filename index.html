@@ -14,7 +14,7 @@
 
     <!-- Navigation Bar  -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-        <a class="navbar-brand" href="#">            
+        <a class="navbar-brand" href="https://volksrat71.github.io/project-1/">            
             <img src="assets/images/icon-camper.png" width="42" height="30" class="d-inline-block align-top" alt="">
             RoadtripperZzz
         </a>
@@ -23,7 +23,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#">We Pick</a>
+                <a class="nav-item nav-link" href="https://volksrat71.github.io/project-1/">We Pick</a>
                 <a class="nav-item nav-link" href="#">You Pick</a>
                 <a class="nav-item nav-link" href="#">About</a>
             </div>
@@ -33,14 +33,67 @@
             <button class="btn btn-outline-dark" type="submit">Search</button>
         </form>
     </nav>
-    <br>
-    <br>
-    <br>
 
-    <!-- Slide Show -->
-    <div class="container">
+
+
+
+
+    <!-- Form -->
+    <div id="form" class="container">
         <div class="row">
-            <div class="col-sm-8 text-center">
+            <div class="col-sm-7">   
+                <div class="card text-white bg-dark">    
+                    <!-- Title -->
+                    <div class="card-header">Attraction finder</div>
+                    <form class="needs-validation" novalidate>
+                        <!-- First Row -->
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom01">First name</label>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom02">Last name</label>
+                                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+                            <div class="col-md-5 mb-3">
+                                <label for="validationCustom02">Email</label>
+                                    <input type="text" class="form-control" id="validationCustom03" placeholder="Email" required>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+                        </div>
+                        <!-- Second Row -->
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3">
+                                <label for="validationCustom03">City</label>
+                                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                <div class="invalid-feedback">Please provide a valid city.</div>
+                            </div>
+                            <div class="col-md-5 mb-3">
+                                <label for="validationCustom04">State</label>
+                                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                                <div class="invalid-feedback">Please provide a valid state.</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom05">Zip</label>
+                                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                                <div class="invalid-feedback">Please provide a valid zip.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">Email My Results</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-light" type="submit">Randomize My Adventure!</button>
+                    </form>             
+                </div>
+            </div>
+            <!-- Destination Ad -->
+            <div class="col-sm-5 text-center">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -54,26 +107,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Destination Ad -->
-            <div class="col-sm-4">
-                <div class="card text-white bg-dark mb-3">
-                    <h5 class="card-header">Your Weekend Getaway</h5>
-                    <div class="card-body">
-                        <h5 class="card-title">Where will you go?</h5>
-                        <p class="card-text">Cloud bread narwhal organic pickled yr single-origin coffee letterpress readymade asymmetrical kale chips poutine heirloom cardigan 
-                            irony chartreuse. Selvage iPhone green juice coloring book pok pok hexagon chambray godard raclette heirloom hot chicken typewriter. Hammock pug 
-                            shaman, 90's jean shorts yr meditation. Hot chicken pork belly gluten-free truffaut selvage tbh twee taiyaki meditation cornhole kitsch kogi put a 
-                            bird on it live-edge pok pok. Gluten-free VHS glossier, umami adaptogen aesthetic meggings mumblecore heirloom williamsburg celiac forage lyft.
-                        </p>
-                        <a href="#" class="btn btn-outline-light">Go somewhere</a>
-                    </div>
-                </div>
+            
             </div>
         </div>
     </div>
-    <br>
+
 
     <!-- Quote Card -->
     <div class="container">
