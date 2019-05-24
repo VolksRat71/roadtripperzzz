@@ -24,6 +24,10 @@ $(".loadingScreen").hide();
 $(document).on("click", "#loadButton", function () {
 $(".container").hide();
 $(".loadingScreen").show();
+var audio = $("#intermission")[0];
+audio.play();
+// setInterval(function(){ window.location.replace("results.html"); }, 3000);
+// stopInterval();
 });
 
 
