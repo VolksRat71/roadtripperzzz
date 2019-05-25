@@ -68,7 +68,7 @@ $(document).ready(function () {
         },
         // Sam's locations
         {
-            place = "Painted Hills",
+            place: "Painted Hills",
             coordinates: "44.6615° N, 120.2730° W",
             terrain: "Desert",
             description: "is one of the three units of the John Day Fossil Beds National Monument, located in Wheeler County, Oregon.Painted Hills is named after the colorful layers of its hills corresponding to various geological eras, formed when the area was an ancient river floodplain."
