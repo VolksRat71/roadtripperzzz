@@ -22,7 +22,7 @@ $(document).ready(function () {
     })();
 
     $(document).on("click", "#loadButton", function () {
-        $(".container").hide();
+        // $(".container").hide();
         // $(".loadingScreen").show();
         // var audio = $("#intermission")[0];
         // audio.play();
@@ -32,6 +32,9 @@ $(document).ready(function () {
     var randomResult= locations[Math.floor(Math.random()* locations.length)];
         console.log(randomResult);
         $("#results-container").text(randomResult);
+        for(var i=0; i< randomResult.length; i++){
+                $("#results-container").append("<h2>" + randomResult.place + "</h2>")
+        }
         }
     );
 
