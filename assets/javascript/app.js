@@ -22,13 +22,21 @@ $(document).ready(function () {
     })();
 
     $(document).on("click", "#loadButton", function () {
-        $(".container").hide();
-        $(".loadingScreen").show();
-        var audio = $("#intermission")[0];
-        audio.play();
+        // $(".container").hide();
+        // $(".loadingScreen").show();
+        // var audio = $("#intermission")[0];
+        // audio.play();
         // setInterval(function(){ window.location.replace("results.html"); }, 3000);
         // stopInterval();
-    });
+    
+    var randomResult= locations[Math.floor(Math.random()* locations.length)];
+        console.log(randomResult);
+        $("#results-container").text(randomResult);
+        for(var i=0; i< randomResult.length; i++){
+                $("#results-container").append("<h2>" + randomResult.place + "</h2>")
+        }
+        }
+    );
 
     // console log to check that js is not broken
     console.log("working");
