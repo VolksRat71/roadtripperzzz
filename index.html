@@ -38,11 +38,12 @@
             <button id="pauseBtn" class="btn btn-outline-dark" type="submit">Pause</button>
         </form>
     </nav>
-
+    
     <!-- JavaScript DOM Hide on Load -->
     <div class="loadingScreen">
         <img class="loadingGif" src="assets/images/loading.gif">
     </div>
+    
 
     <!-- Form -->
     <div id="form" class="container">
@@ -55,8 +56,11 @@
                         <!-- First Row -->
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
-                                <label for="userFirstName">First name</label>
-                                    <input type="text" class="form-control" id="userFirstName" placeholder="First name" required>
+
+
+                                <label id="first-name" for="validationCustom01">First name</label>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+
                                 <div class="valid-feedback">Looks good!</div>
                             </div>
                             <div class="col-md-3 mb-3">
@@ -118,7 +122,10 @@
         </div>
     </div>
 
+<!-- Container for the results of your vacation-->
+<div class="container" id="results-container">
 
+</div>
     <!-- Quote Card -->
     <div class="container">
         <div class="row">
@@ -137,7 +144,6 @@
             </div>
         </div>
     </div>
-
     <!-- Link jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Link Bootstrap -->
