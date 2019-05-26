@@ -14,6 +14,8 @@
 
 </head>
 <body>
+    
+    
 
     <!-- Navigation Bar  -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
@@ -32,8 +34,8 @@
             </div>
         </div>
         <form class="form-inline">
-            <button class="btn btn-outline-dark" type="submit">Play</button>
-            <button class="btn btn-outline-dark" type="submit">Pause</button>
+            <button id="playBtn" class="btn btn-outline-dark" type="submit">Play</button>
+            <button id="pauseBtn" class="btn btn-outline-dark" type="submit">Pause</button>
         </form>
     </nav>
     
@@ -54,42 +56,45 @@
                         <!-- First Row -->
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
+
+
                                 <label id="first-name" for="validationCustom01">First name</label>
                                     <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+
                                 <div class="valid-feedback">Looks good!</div>
                             </div>
                             <div class="col-md-3 mb-3">
-                                <label for="validationCustom02">Last name</label>
-                                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                                <label for="userLastName">Last name</label>
+                                    <input type="text" class="form-control" id="userLastName" placeholder="Last name" required>
                                 <div class="valid-feedback">Looks good!</div>
                             </div>
                             <div class="col-md-5 mb-3">
-                                <label for="validationCustom02">Email</label>
-                                    <input type="text" class="form-control" id="validationCustom03" placeholder="Email" required>
+                                <label for="userEmail">Email</label>
+                                    <input type="text" class="form-control" id="userEmail" placeholder="Email" required>
                                 <div class="valid-feedback">Looks good!</div>
                             </div>
                         </div>
                         <!-- Second Row -->
                         <div class="form-row">
                             <div class="col-md-3 mb-3">
-                                <label for="validationCustom03">City</label>
-                                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                <label for="userCity">City</label>
+                                    <input type="text" class="form-control" id="userCity" placeholder="City" required>
                                 <div class="invalid-feedback">Please provide a valid city.</div>
                             </div>
                             <div class="col-md-5 mb-3">
-                                <label for="validationCustom04">State</label>
-                                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                                <label for="userState">State</label>
+                                    <input type="text" class="form-control" id="userState" placeholder="State" required>
                                 <div class="invalid-feedback">Please provide a valid state.</div>
                             </div>
                             <div class="col-md-4 mb-3">
-                                <label for="validationCustom05">Zip</label>
-                                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                                <label for="userZipcode">Zip</label>
+                                    <input type="text" class="form-control" id="userZipcode" placeholder="Zip" required>
                                 <div class="invalid-feedback">Please provide a valid zip.</div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" required>
+                                <input id="checkBox" class="form-check-input" type="checkbox" value="" required>
                                     <label class="form-check-label">Cue the music</label>
                             </div>
                         </div>
