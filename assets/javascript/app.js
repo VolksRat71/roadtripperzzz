@@ -28,16 +28,21 @@ $(document).ready(function () {
         // audio.play();
         // setInterval(function(){ window.location.replace("results.html"); }, 3000);
         // stopInterval();
-    
-    var randomResult= locations[Math.floor(Math.random()* locations.length)];
+var renderVacation= function(){}
+     randomResult= locations[Math.floor(Math.random()* locations.length)];
         console.log(randomResult);
-        $("#results-container").text(randomResult);
-        for(var i=0; i< randomResult.length; i++){
-                $("#results-container").append("<h2>" + randomResult.place + "</h2>")
-        }
-        }
+        $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
+        $("#placeContent").text("Place:" + " " + randomResult.place);
+        $("#coordinatesContent").text("Coordinates" + " " + randomResult.coordinates)
+        $("#terrainContent").text("Terrain:" + " " + randomResult.terrain);
+        $("#descriptionContent").text("A brief description:" + " " + randomResult.description);
+       
+        
+        renderVacation();
+    }
+    
     );
-
+    
     // console log to check that js is not broken
     console.log("working");
 
