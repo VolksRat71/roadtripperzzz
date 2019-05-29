@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
     // hide page functions upon load
@@ -217,3 +218,4 @@ $(document).ready(function () {
     console.log("end of script");
 
 });
+
