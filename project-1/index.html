@@ -51,44 +51,36 @@
             <div class="col-sm-7">   
                 <div class="card text-white bg-dark">    
                     <!-- Title -->
-                    <div class="card-header">Where will you go?</div>
-                    <form class="needs-validation" novalidate>
+                    <div class="card-header">Where will you go?<span id="authenticate">*required fields</span></div>
+                    <form>
                         <!-- First Row -->
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
-
-
                                 <label id="first-name" for="userFirstName">First name</label>
-                                    <input type="text" class="form-control" id="userFirstName" placeholder="First name" required>
-                                <div class="valid-feedback">Looks good!</div>
+                                <input type="text" class="form-control" id="userFirstName" placeholder="First name" required>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="userLastName">Last name</label>
-                                    <input type="text" class="form-control" id="userLastName" placeholder="Last name" required>
-                                <div class="valid-feedback">Looks good!</div>
+                                <input type="text" class="form-control" id="userLastName" placeholder="Last name" required>
                             </div>
                             <div class="col-md-5 mb-3">
                                 <label for="userEmail">Email</label>
-                                    <input type="text" class="form-control" id="userEmail" placeholder="Email" required>
-                                <div class="valid-feedback">Looks good!</div>
+                                <input type="text" class="form-control" id="userEmail" placeholder="Email" required>
                             </div>
                         </div>
                         <!-- Second Row -->
                         <div class="form-row">
                             <div class="col-md-3 mb-3">
                                 <label for="userCity">City</label>
-                                    <input type="text" class="form-control" id="userCity" placeholder="City" required>
-                                <div class="invalid-feedback">Please provide a valid city.</div>
+                                <input type="text" class="form-control" id="userCity" placeholder="City" required>
                             </div>
                             <div class="col-md-5 mb-3">
                                 <label for="userState">State</label>
-                                    <input type="text" class="form-control" id="userState" placeholder="State" required>
-                                <div class="invalid-feedback">Please provide a valid state.</div>
+                                <input type="text" class="form-control" id="userState" placeholder="State" required>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="userZipcode">Zip</label>
-                                    <input type="text" class="form-control" id="userZipcode" placeholder="Zip" required>
-                                <div class="invalid-feedback">Please provide a valid zip.</div>
+                                <input type="text" class="form-control" id="userZipcode" placeholder="Zip" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -97,7 +89,7 @@
                                     <label class="form-check-label">Cue the music</label>
                             </div>
                         </div>
-                        <button id="loadButton" class="btn btn-outline-light" type="submit">Randomize My Adventure!</button>
+                        <button id="loadButton" class="btn btn-outline-light" type="submit">Load up, bud!</button>
                     </form>             
                 </div>
             </div>
