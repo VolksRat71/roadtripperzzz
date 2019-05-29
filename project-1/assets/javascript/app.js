@@ -32,30 +32,6 @@ $(document).ready(function () {
     // form submit 
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
-<<<<<<< HEAD
-    // GET THE RANDOM VACATION ONCE BUTTON IS CLICKED- Sam //
-    var renderVacation= function(){}
-         randomResult= locations[Math.floor(Math.random()* locations.length)];
-            console.log(randomResult);
-            $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
-            $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
-            $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
-            $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
-            $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
-            $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
-           
-            
-            renderVacation();
-        }
-        
-        );
-        $(".loadingScreen").show();
-        $(".container").hide();
-        $("#playBtn").show();
-        $("#pauseBtn").show();
-        audio.play();
-=======
->>>>>>> b89e0e06c93ce9a1fe6d9a6a05e467792f62934b
 
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
@@ -79,15 +55,12 @@ $(document).ready(function () {
         $(".loadingScreen").show();
         $(".container").hide();
 
-<<<<<<< HEAD
-        
-=======
         // Random location selector
-        var randomResult= locations[Math.floor(Math.random()* locations.length)];
-        $("#results-container").text(randomResult);
-        for(var i=0; i< randomResult.length; i++){
-        $("#results-container").append("<h2>" + randomResult.place + "</h2>")
-        }
+        // var randomResult= locations[Math.floor(Math.random()* locations.length)];
+        // $("#results-container").text(randomResult);
+        // for(var i=0; i< randomResult.length; i++){
+        // $("#results-container").append("<h2>" + randomResult.place + "</h2>")
+        // }
         
         // Checkbox value check
         // loading simulator
@@ -99,7 +72,6 @@ $(document).ready(function () {
             audio.play();    
         };}
     });
->>>>>>> b89e0e06c93ce9a1fe6d9a6a05e467792f62934b
 
     // list of locations
     var locations = [
