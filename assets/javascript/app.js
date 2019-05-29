@@ -33,6 +33,15 @@ $(document).ready(function () {
     var checkBox
 
 
+
+    var DirectionsService = {
+        origin:"Portland, Oregon",
+  destination: "Belmont, California",
+  travelMode: "DRIVING",
+    }
+
+
+
     $(document).on("click", "#loadButton", function () {
 
         event.preventDefault();
