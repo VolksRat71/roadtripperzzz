@@ -177,7 +177,54 @@ $(document).ready(function () {
         }
     ]
 
-    // proof of ending script without bugs
-    console.log("end of script");
 
-});
+    //FIREBASE
+    // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDxMo9zE0YGmDVzh6O0BHDPA9ClufzCQ0E",
+            authDomain: "project-1-e9716.firebaseapp.com",
+            databaseURL: "https://project-1-e9716.firebaseio.com",
+            projectId: "project-1-e9716",
+            storageBucket: "project-1-e9716.appspot.com",
+            messagingSenderId: "359911792247",
+            appId: "1:359911792247:web:35b92d2cc78970ac"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        var database = firebase.database();
+
+        //Initial Values
+        var firstName = "";
+        var lastName = "";
+        var email = "";
+        var city = "";
+        var state = "";
+        var zip = 0;
+
+        //Button click event
+        $("#loadButton").on("click", function (event) { 
+            //get values from form
+            firstName = $("#userFirstName").val().trim();
+            lastName = $("#userLastName").val().trim();
+            email = $("#userEmail").val().trim();
+            city = $("#userCity").val().trim();
+            state = $("#userState").val().trim();
+            zip = $("#userZipcode").val().trim();
+
+            //push values to
+            database.ref().push({
+                userFirstName: firstName,
+                userLastName: lastName,
+                userEmail: email,
+                userCity: city,
+                userState: state,
+                userZipcode: zip
+            })
+        });
+
+
+            // proof of ending script without bugs
+            console.log("end of script");
+
+        });
