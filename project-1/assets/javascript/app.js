@@ -75,7 +75,7 @@ $(document).ready(function () {
         }
         
         // Checkbox value check
-        // loading simulator
+        // loading simulator...
         if (checkBox%2 == 0){
         setInterval(function(){$(".loadingScreen").hide(); $("#results-container").show();}, 3000);
         }else{
