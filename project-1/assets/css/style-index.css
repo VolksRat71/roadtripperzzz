@@ -40,3 +40,9 @@ form{
      border: 1px solid black;
      color: blue;
  }
+
+ #authenticate{
+     color:red;
+     font-size: 12px;
+     float: right;
+ }

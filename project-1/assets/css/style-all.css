@@ -1,0 +1,10 @@
+body{
+    background-image: url(../../assets/images/woodFloor.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.navbar{
+    height: 74px;
+}
