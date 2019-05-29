@@ -5,15 +5,12 @@ $(document).ready(function () {
     $(".loadingScreen").hide();
     $("#playBtn").hide();
     $("#pauseBtn").hide();
+    $("#authenticate").hide();
+    $("#locationDump").show();
 
-    // variable list
-    var userFirstName = "";
-    var userLastName = "";
-    var userEmail = "";
-    var userCity = "";
-    var userState = "";
-    var userZipcode= "";
+    // easter egg
     var audio = $("#intermission")[0];
+    var checkBox = 0;
 
     // audio controls
     $(document).on("click", "#playBtn", function () {
@@ -28,9 +25,14 @@ $(document).ready(function () {
         console.log("Pause Audio");
     });
 
+    $(document).on("click", "#checkBox", function (){
+        checkBox += 1;
+    })
+
     // form submit 
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
+<<<<<<< HEAD
     // GET THE RANDOM VACATION ONCE BUTTON IS CLICKED- Sam //
     var renderVacation= function(){}
          randomResult= locations[Math.floor(Math.random()* locations.length)];
@@ -52,6 +54,8 @@ $(document).ready(function () {
         $("#playBtn").show();
         $("#pauseBtn").show();
         audio.play();
+=======
+>>>>>>> b89e0e06c93ce9a1fe6d9a6a05e467792f62934b
 
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
@@ -67,10 +71,35 @@ $(document).ready(function () {
         console.log(userState);
         console.log(userZipcode);
     
-        // Simulated loading
-        setInterval(function(){$(".loadingScreen").hide(); $("#results-container").show();}, 3000);
+        //form authentication
+        if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
+        $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
+        $("#authenticate").show();
+        }else{
+        $(".loadingScreen").show();
+        $(".container").hide();
 
+<<<<<<< HEAD
         
+=======
+        // Random location selector
+        var randomResult= locations[Math.floor(Math.random()* locations.length)];
+        $("#results-container").text(randomResult);
+        for(var i=0; i< randomResult.length; i++){
+        $("#results-container").append("<h2>" + randomResult.place + "</h2>")
+        }
+        
+        // Checkbox value check
+        // loading simulator
+        if (checkBox%2 == 0){
+        setInterval(function(){$(".loadingScreen").hide(); $("#results-container").show();}, 3000);
+        }else{
+            setInterval(function(){$(".loadingScreen").hide(); $("#results-container").show();$("#playBtn").show();
+            $("#pauseBtn").show();}, 14600);
+            audio.play();    
+        };}
+    });
+>>>>>>> b89e0e06c93ce9a1fe6d9a6a05e467792f62934b
 
     // list of locations
     var locations = [
