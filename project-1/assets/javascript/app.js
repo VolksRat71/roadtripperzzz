@@ -28,10 +28,10 @@ $(document).ready(function () {
     $(document).on("click", "#checkBox", function (){
         checkBox += 1;
     })
-
     // form submit 
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
+
         var renderVacation= function(){
         randomResult= locations[Math.floor(Math.random()* locations.length)];
            console.log(randomResult);
@@ -44,7 +44,7 @@ $(document).ready(function () {
           
         }
            renderVacation();
-       
+
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
         var userLastName = $("#userLastName").val().trim();
@@ -58,7 +58,14 @@ $(document).ready(function () {
         console.log(userCity);
         console.log(userState);
         console.log(userZipcode);
-    
+
+            function addLocation(){
+                $('#results-container').empty();
+                $('#results-container').append("<iframe width='600' height='450' frameborder='0' style='border:0'</iframe>")
+                $("iframe").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+userState+"&destination=Seattle+Washington")
+            }
+
+        addLocation();
         //form authentication
         if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
         $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
