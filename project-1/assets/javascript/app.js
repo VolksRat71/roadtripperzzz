@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+//writing a blablablablalbalbalblba //
     // hide page functions upon load
     // $("#results-container").hide();
     $(".loadingScreen").hide();
