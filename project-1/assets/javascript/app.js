@@ -169,7 +169,7 @@ $(document).ready(function () {
         },
         {
             place: "Dixie Campground (Malheur National Forest)",
-            terrain: "44.534823 N, 118.5879 W",
+            coordinates: "44.534823 N, 118.5879 W",
             terrain: "Wooded (Ponderosa)",
             description: "This is a great destination for berry picking, it is also a wonderful base camp for anyone wanting to hike, hunt or just explore the Malheur National Forest.",
          weather: "<script type='text/javascript' src='https://darksky.net/widget/default/44.2049,-119.327/us12/en.js?width=100%&height=350&title=Malheur National Forest, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>"
@@ -183,21 +183,21 @@ $(document).ready(function () {
         },
         // Nate's Locations
         {
-            name: "Devils Punch Bowl",
+            place: "Devils Punch Bowl",
             coordinates: "44.7472°N, 122.0637°W",
             terrain: "Coast",
             description: "Along the beautiful Oregon Coast. It is centered on a large bowl naturally carved in a rock headland which is partially open to the Pacific Ocean.",
          weather: "<script type='text/javascript' src='https://darksky.net/widget/default/43.7474,-118.0841/us12/en.js?width=100%&height=350&title=Devils Punch Bowl, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>"
         },
         {
-            name: "Multnomah Falls",
+            place: "Multnomah Falls",
             coordinates: "45.5762°N, 122.1158°W",
             terrain: "Forest",
             description: "Two consecutive waterfalls & beautiful hiking with a bridge along the Columbia Gorge. Visit the Multnomah Falls lodge built in 1925.",
          weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.5759,-122.1155/us12/en.js?width=100%&height=350&title=Multnomah Falls, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>"
         },
         {
-            name: "Oregon Badlands Wilderness",
+            place: "Oregon Badlands Wilderness",
             coordinates: "44.0112°N, 121.0009°W",
             terrain: "Desert",
             description: "The area is known for igneous castle-like rock formations, harsh terrain, ancient Juniper trees, sagebrush, and extensive arid land. A great place to hike and camp.",
