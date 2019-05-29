@@ -31,7 +31,22 @@ $(document).ready(function () {
     // form submit 
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
-
+    // GET THE RANDOM VACATION ONCE BUTTON IS CLICKED- Sam //
+    var renderVacation= function(){}
+         randomResult= locations[Math.floor(Math.random()* locations.length)];
+            console.log(randomResult);
+            $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
+            $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
+            $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
+            $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
+            $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
+            $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
+           
+            
+            renderVacation();
+        }
+        
+        );
         $(".loadingScreen").show();
         $(".container").hide();
         $("#playBtn").show();
@@ -55,14 +70,7 @@ $(document).ready(function () {
         // Simulated loading
         setInterval(function(){$(".loadingScreen").hide(); $("#results-container").show();}, 3000);
 
-        // Random location seclector
-        var randomResult= locations[Math.floor(Math.random()* locations.length)];
-            $("#results-container").text(randomResult);
-            for(var i=0; i< randomResult.length; i++){
-                    $("#results-container").append("<h2>" + randomResult.place + "</h2>")
-            }
-            console.log(randomResult);
-    });
+        
 
     // list of locations
     var locations = [
