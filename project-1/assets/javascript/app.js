@@ -33,19 +33,7 @@ $(document).ready(function () {
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
 
-        var renderVacation= function(){
-        randomResult= locations[Math.floor(Math.random()* locations.length)];
-           console.log(randomResult);
-           $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
-           $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
-           $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
-           $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
-           $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
-           $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
-          
-        }
-           renderVacation();
-
+        
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
         var userLastName = $("#userLastName").val().trim();
@@ -59,28 +47,40 @@ $(document).ready(function () {
         console.log(userCity);
         console.log(userState);
         console.log(userZipcode);
+        
+        var renderVacation= function(){
+        randomResult= locations[Math.floor(Math.random()* locations.length)];
+           console.log(randomResult);
+           $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
+           $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
+           $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
+           $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
+           $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
+           $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
 
-            function addLocation(){
-                $('#results-container').empty();
-                $('#results-container').append("<iframe width='600' height='450' frameborder='0' style='border:0'</iframe>")
-                $("iframe").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+userState+"&destination=Seattle+Washington")
-            }
+        // adding the map to the on click function
+           $('#results-container').append("<iframe width='600' height='450' frameborder='0' style='border:0'</iframe>");
+           $("iframe").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+","+userState+"&destination="+randomResult.place+",Oregon");
+       
+        }
+           renderVacation();
+           
 
-        addLocation();
+        // addLocation();
         //form authentication
-        if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
-        $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
-        $("#authenticate").show();
-        }else{
-        $(".loadingScreen").show();
-        $(".container").hide();
+        // if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
+        // $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
+        // $("#authenticate").show();
+        // }else{
+        // $(".loadingScreen").show();
+        // $(".container").hide();
 
         // Random location selector
-        var randomResult= locations[Math.floor(Math.random()* locations.length)];
-        $("#results-container").text(randomResult);
-        for(var i=0; i< randomResult.length; i++){
-        $("#results-container").append("<h2>" + randomResult.place + "</h2>")
-        }
+        // var randomResult= locations[Math.floor(Math.random()* locations.length)];
+        // $("#results-container").text(randomResult);
+        // for(var i=0; i< randomResult.length; i++){
+        // $("#results-container").append("<h2>" + randomResult.place + "</h2>")
+        // }
         
         // Checkbox value check
         // loading simulator...
@@ -90,7 +90,7 @@ $(document).ready(function () {
             setInterval(function(){$(".loadingScreen").hide(); $("#results-container").show();$("#playBtn").show();
             $("#pauseBtn").show();}, 14600);
             audio.play();    
-        };}
+        };
     });
 
     // list of locations
