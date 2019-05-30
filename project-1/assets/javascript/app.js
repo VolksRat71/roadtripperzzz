@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // hide page functions upon load
-    // $("#results-container").hide();
+    $("#results-container").hide();
     $(".loadingScreen").hide();
     $("#playBtn").hide();
     $("#pauseBtn").hide();
