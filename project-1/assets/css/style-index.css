@@ -46,3 +46,7 @@ form{
      font-size: 12px;
      float: right;
  }
+ #weatherContent {
+     background-color: blue;
+     color: pink;
+ }
