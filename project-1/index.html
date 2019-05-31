@@ -10,8 +10,9 @@
     <audio id="intermission" preload="auto">
         <source src="assets/audio/The Offspring - Intermission.mp3"> </source>
     </audio>
-    
 
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    
 </head>
 <body>
     
@@ -101,10 +102,14 @@
             <span id="coordinatesContent"></span> <br></br>
             <span id="terrainContent"></span> <br></br>
             <span id="descriptionContent"></span> <br></br>
+<<<<<<< HEAD
             <div class = "container" id="weatherContent1">
                     <script type='text/javascript' src='https://darksky.net/widget/default/42.360082,-71.05888/us12/en.js?height=500&title=Full Forecast&textColor=333333&bgColor=FFFFFF&skyColor=333&fontFamily=Default&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>
                     <!-- <iframe id="forecast_embed" frameborder="0" height="245" width="100%" src="//forecast.io/embed/#lat=42.3583&lon=-71.0603&name=Downtown Boston"></iframe> -->
                 </div> <br></br>
+=======
+            <span id="weatherContent"></s pan> <br></br>
+>>>>>>> master
         </div>
             <!-- Destination Ad... -->
             <div class="col-sm-5 text-center">
@@ -134,11 +139,21 @@
             width="600"
             height="450"
             frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
-              &q=Space+Needle,Seattle+WA" allowfullscreen>
+            src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
+              &origin=Portland+Oregon&destination=Seattle+Washington" allowfullscreen>
           </iframe>
     </div> -->
 
+<!-- Container for the results of your vacation-->
+<div class="container" id="results-container">
+    <div class="another-container" id= "results-container">
+        <h1 id="results-title"></h1>
+        <span id="placeContent"></span> <br></br>
+        <span id="coordinatesContent"></span> <br></br>
+        <span id="terrainContent"></span> <br></br>
+        <span id="descriptionContent"></span> <br></br>
+        <span id="weatherContent"></span> <br></br>
+    </div>
 </div>
     <!-- Quote Card -->
     <div class="container">
