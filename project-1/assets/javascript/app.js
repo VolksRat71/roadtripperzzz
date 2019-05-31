@@ -8,6 +8,7 @@ $(document).ready(function () {
     $("#pauseBtn").hide();
     $("#authenticate").hide();
     $("#locationDump").show();
+    // $("#map").hide();
 
     // easter egg
     var audio = $("#intermission")[0];
@@ -86,19 +87,20 @@ $(document).ready(function () {
         // Checkbox value check
         // loading simulator...
         if (checkBox%2 == 0){
-        setInterval(function(){$(".loadingScreen").hide(); $("#results-container").show();}, 3000);
+        setInterval(function(){$(".loadingScreen").hide(); imageRender();}, 3000); clearInterval();
         }else{
-            setInterval(function(){$(".loadingScreen").hide(); $("#results-container").show();$("#playBtn").show();
-            $("#pauseBtn").show();}, 14600);
+            setInterval(function(){$(".loadingScreen").hide(); imageRender(); $("#playBtn").show();
+            $("#pauseBtn").show();}, 14600); clearInterval();
             audio.play();    
         };}
+
     });
 
     function imageRender() {
         // console.log(locations[i].image);
-        $("#locationDump").append(locations[i].image);
-        // $("#locationDump").append(`<div class="locationName"> ${locations[i].place}</div>`);
-        // $("#locationDump").append(`<div class="locationDescription"> ${locations[i].description}</div>`);
+        $("#locationDump").append(locations[0].image);
+        $("#locationDump").append(`<div class="locationName"> ${locations[0].place}</div>`);
+        $("#locationDump").append(`<div class="locationDescription"> ${locations[0].description}</div>`);
     }
 
 
@@ -109,7 +111,7 @@ $(document).ready(function () {
             place: "Neahkahnie Mountain",
             coordinates: "45.7440° N, 123.9410° W",
             terrain: "Coastal Forest",
-            description: "Neahkahnie Mountain is a mountain, or headland, on the Oregon Coast, north of Manzanita in Oswald West State Park overlooking U.S. Route 101. The peak is part of the Northern Oregon Coast Range, which is part of the Oregon Coast Range.[1] It is best known for stories of Spanish treasure said to be buried either at the foot of the mountain, or on its slopes.",
+            description: "Neahkahnie Mountain is a mountain, or headland, on the Oregon Coast, north of Manzanita in Oswald West State Park overlooking U.S. Route 101. The peak is part of the Northern Oregon Coast Range, which is part of the Oregon Coast Range. It is best known for stories of Spanish treasure said to be buried either at the foot of the mountain, or on its slopes.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.7469,-123.9519/us12/en.js?width=100%&height=350&title=Neahkahnie Mountain&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Neahkahnie Mountain.jpg'>"
         },
@@ -143,7 +145,7 @@ $(document).ready(function () {
             place: "Crater Lake",
             coordinates: "42.9446° N, 122.1090° W",
             terrain: "Forest",
-            description: "Crater Lake is a crater lake in south-central Oregon in the western United States. It is the main feature of Crater Lake National Park and is famous for its deep blue color and water clarity.",
+            description: "Crater Lake is a crater lake in south-central Oregon in the western United States. It is the main feature of Crater Lake National Park and is famous for its deep blue color and water clarity. ",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/42.9415,-122.0988/us12/en.js?width=100%&height=350&title=Crater Lake&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Crater Lake.jpg'>"
 
@@ -250,11 +252,6 @@ $(document).ready(function () {
 
         }
     ]
-
-
-    for(i = 0; i < locations.length; i++){
-    imageRender();
-    }
 
     // proof of ending script without bugs
     console.log("end of script");
