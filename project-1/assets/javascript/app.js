@@ -8,7 +8,6 @@ $(document).ready(function () {
     $("#pauseBtn").hide();
     $("#authenticate").hide();
     $("#locationDump").show();
-    // $("#map").hide();
 
     // easter egg
     var audio = $("#intermission")[0];
@@ -45,65 +44,44 @@ $(document).ready(function () {
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
         var userLastName = $("#userLastName").val().trim();
-        var userEmail = $("#userEmail").val().trim();
         var userCity = $("#userCity").val().trim();
         var userState = $("#userState").val().trim();
         var userZipcode = $("#userZipcode").val().trim();
         console.log(userFirstName);
         console.log(userLastName);
-        console.log(userEmail);
         console.log(userCity);
         console.log(userState);
         console.log(userZipcode);
         
-        var renderVacation= function(){
-        randomResult= locations[Math.floor(Math.random()* locations.length)];
-           console.log(randomResult);
-           $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
-           $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
-           $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
-           $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
-           $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
-           $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
-
-        // adding the map to the on click function
-            $('#results-container').empty();
-           $('#results-container').append("<iframe id='map_frame' width='600' height='450' frameborder='0' style='border:0'</iframe>");
-           $("#map_frame").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+","+userState+"&destination="+randomResult.place+",Oregon");
-       
-        }
-           renderVacation();
-           
-
-        // addLocation();
-        //form authentication
-        // if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
-        // $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
-        // $("#authenticate").show();
-        // }else{
-        // $(".loadingScreen").show();
-        // $(".container").hide();
+        // form authentication
+        if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
+        $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
+        $("#authenticate").show();
+        }else{
+        $(".loadingScreen").show();
+        $(".container").hide();
 
         var renderVacation= function(){
             randomResult= locations[Math.floor(Math.random()* locations.length)];
-               console.log(randomResult);
-               $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
-               $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
-               $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
-               $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
-               $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
-               $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
-              
+                console.log(randomResult);
+
+                $("#locationDump").append(randomResult.image);
+                $("#locationDump").append(`<div class="locationName"> ${randomResult.place} </div>`);
+                $("#locationDump").append(`<div class="locationDescription"> ${randomResult.description} </div>`);
+                $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
+                $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
+                $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
+                $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
+                $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
+                $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
+
+        // adding the map to the on click function
+                $('#results-container').empty();
+                $('#results-container').append("<iframe width='600' height='450' frameborder='0' style='border:0'</iframe>");
+                $("iframe").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+","+userState+"&destination="+randomResult.place+",Oregon");
+           
         }
-
         renderVacation();
-
-        // Random location selector
-        // var randomResult= locations[Math.floor(Math.random()* locations.length)];
-        // $("#results-container").text(randomResult);
-        // for(var i=0; i< randomResult.length; i++){
-        // $("#results-container").append("<h2>" + randomResult.place + "</h2>")
-        // }
         
         // Checkbox value check
         // loading simulator...
@@ -114,14 +92,7 @@ $(document).ready(function () {
             $("#pauseBtn").show();}, 14600); clearInterval();
             audio.play(); 
         };
-    });
-
-    function imageRender() {
-        // console.log(locations[i].image);
-        $("#locationDump").append(locations[0].image);
-        $("#locationDump").append(`<div class="locationName"> ${locations[0].place}</div>`);
-        $("#locationDump").append(`<div class="locationDescription"> ${locations[0].description}</div>`);
-    }
+    };
 
 
     // list of locations
@@ -150,7 +121,6 @@ $(document).ready(function () {
             description: "These unique sculptures are the result of three distinctly welded volcanic tuffs settled upon one another and weathered away at different rates.",
             weather:"<script type='text/javascript' src='https://darksky.net/widget/default/44.5779,-121.4218/us12/en.js?width=100%&height=350&title=Metolius Balancing Rocks&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Metolius Balancing Rocks.jpg'>"
-
         },
         {
             place: "Mount Hood",
@@ -159,7 +129,6 @@ $(document).ready(function () {
             description: "It is located about 50 miles (80 km) east-southeast of Portland, on the border between Clackamas and Hood River counties. In addition to being Oregon's highest mountain, it is one of the loftiest mountains in the nation based on its prominence.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.3735,-121.6959/us12/en.js?width=100%&height=350&title=Mount Hood&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Mount Hood.jpg'>"
-
         },
         {
             place: "Crater Lake",
@@ -168,7 +137,6 @@ $(document).ready(function () {
             description: "Crater Lake is a crater lake in south-central Oregon in the western United States. It is the main feature of Crater Lake National Park and is famous for its deep blue color and water clarity. ",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/42.9415,-122.0988/us12/en.js?width=100%&height=350&title=Crater Lake&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Crater Lake.jpg'>"
-
         },
         // Sam's locations
         {
@@ -232,7 +200,6 @@ $(document).ready(function () {
             description: "This is a great destination for berry picking, it is also a wonderful base camp for anyone wanting to hike, hunt or just explore the Malheur National Forest.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/44.2049,-119.327/us12/en.js?width=100%&height=350&title=Malheur National Forest, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Dixie Campground.jpg>"
-
         },
         {
             place: "Haystack Rock, Cannon Beach",
@@ -241,7 +208,6 @@ $(document).ready(function () {
             description: "Visitors to Haystack Rock can view many species of marine wildlife in their natural habitat during low tide.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.8844,-123.9684/us12/en.js?width=100%&height=350&title=Haystack Rock, Cannon Beach, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Haystack Rock.jpg>"
-
         },
         // Nate's Locations
         {
@@ -251,7 +217,6 @@ $(document).ready(function () {
             description: "Along the beautiful Oregon Coast. It is centered on a large bowl naturally carved in a rock headland which is partially open to the Pacific Ocean.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/43.7474,-118.0841/us12/en.js?width=100%&height=350&title=Devils Punch Bowl, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Devils Punch Bowl.jpg>"
-
         },
         {
             name: "Multnomah Falls",
@@ -260,7 +225,6 @@ $(document).ready(function () {
             description: "Two consecutive waterfalls & beautiful hiking with a bridge along the Columbia Gorge. Visit the Multnomah Falls lodge built in 1925.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.5759,-122.1155/us12/en.js?width=100%&height=350&title=Multnomah Falls, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Multnomah Falls.jpg>"
-
         },
         {
             name: "Oregon Badlands Wilderness",
@@ -269,7 +233,6 @@ $(document).ready(function () {
             description: "The area is known for igneous castle-like rock formations, harsh terrain, ancient Juniper trees, sagebrush, and extensive arid land. A great place to hike and camp.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/44.0033,-121.0231/us12/en.js?width=100%&height=350&title=Oregon Badlands Wilderness, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: "<img class='locationImage' src='./assets/images/locationImages/Oregon Badlands Wilderness.jpg>"
-
         }
     ]
 
@@ -304,5 +267,5 @@ $(document).ready(function () {
     // proof of ending script without bugs
     console.log("end of script");
 
-
+});
 
