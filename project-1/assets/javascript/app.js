@@ -2,13 +2,14 @@
 $(document).ready(function () {
 
     // hide page functions upon load
+    
     $("#results-container").hide();
     $(".loadingScreen").hide();
     $("#playBtn").hide();
     $("#pauseBtn").hide();
     $("#authenticate").hide();
     $("#locationDump").show();
-    // $("#map").hide();
+    $("#finalPage").show();
 
     // easter egg
     var audio = $("#intermission")[0];
@@ -55,74 +56,70 @@ $(document).ready(function () {
         console.log(userCity);
         console.log(userState);
         console.log(userZipcode);
-        
-        var renderVacation= function(){
-        randomResult= locations[Math.floor(Math.random()* locations.length)];
-           console.log(randomResult);
-           $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
-           $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
-           $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
-           $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
-           $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
-           $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
-
-        // adding the map to the on click function
-            $('#results-container').empty();
-           $('#results-container').append("<iframe id='map_frame' width='600' height='450' frameborder='0' style='border:0'</iframe>");
-           $("#map_frame").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+","+userState+"&destination="+randomResult.place+",Oregon");
-       
-        }
-           renderVacation();
            
+        // form authentication
+        if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
+        $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
+        $("#authenticate").show();
+        } else {
+        $(".loadingScreen").show();
+        $(".container").hide();
 
-        // addLocation();
-        //form authentication
-        // if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
-        // $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
-        // $("#authenticate").show();
-        // }else{
-        // $(".loadingScreen").show();
-        // $(".container").hide();
-
-        var renderVacation= function(){
-            randomResult= locations[Math.floor(Math.random()* locations.length)];
-               console.log(randomResult);
-               $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
-               $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
-               $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
-               $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
-               $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
-               $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
-              
-        }
-
-        renderVacation();
-
-        // Random location selector
-        // var randomResult= locations[Math.floor(Math.random()* locations.length)];
-        // $("#results-container").text(randomResult);
-        // for(var i=0; i< randomResult.length; i++){
-        // $("#results-container").append("<h2>" + randomResult.place + "</h2>")
-        // }
-        
         // Checkbox value check
         // loading simulator...
         if (checkBox%2 == 0){
-        setInterval(function(){$(".loadingScreen").hide(); imageRender();}, 3000); clearInterval();
+        setInterval(function(){$(".loadingScreen").hide(); clearInterval();
+        }, 3000); 
         }else{
-            setInterval(function(){$(".loadingScreen").hide(); imageRender(); $("#playBtn").show();
-            $("#pauseBtn").show();}, 14600); clearInterval();
             audio.play(); 
+            setInterval(function(){$(".loadingScreen").hide(); $("#pauseBtn").show(); $("#playBtn").show(); clearInterval();}, 14600);
+        };
+
+        var renderVacation= function(){
+            randomResult= locations[Math.floor(Math.random()* locations.length)];
+            console.log(randomResult);
+            $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
+            $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
+            $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
+            $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
+            $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
+            $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
+
+            // adding the map to the on click function
+            $('#results-container').empty();
+            $('#results-container').append("<iframe id='map_frame' width='600' height='450' frameborder='0' style='border:0'</iframe>");
+            $("#map_frame").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+","+userState+"&destination="+randomResult.place+",Oregon");
+        }
+        
+        renderVacation();
+        
+        //FIREBASE
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDxMo9zE0YGmDVzh6O0BHDPA9ClufzCQ0E",
+            authDomain: "project-1-e9716.firebaseapp.com",
+            databaseURL: "https://project-1-e9716.firebaseio.com",
+            projectId: "project-1-e9716",
+            storageBucket: "project-1-e9716.appspot.com",
+            messagingSenderId: "359911792247",
+            appId: "1:359911792247:web:35b92d2cc78970ac"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        var database = firebase.database();
+
+        //push values to
+        database.ref().push({
+            userFirstName: firstName,
+            userLastName: lastName,
+            userEmail: email,
+            userCity: city,
+            userState: state,
+            userZipcode: zip
+        })
         };
     });
-
-    function imageRender() {
-        // console.log(locations[i].image);
-        $("#locationDump").append(locations[0].image);
-        $("#locationDump").append(`<div class="locationName"> ${locations[0].place}</div>`);
-        $("#locationDump").append(`<div class="locationDescription"> ${locations[0].description}</div>`);
-    }
-
 
     // list of locations
     var locations = [
@@ -273,36 +270,7 @@ $(document).ready(function () {
         }
     ]
 
-    //FIREBASE
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyDxMo9zE0YGmDVzh6O0BHDPA9ClufzCQ0E",
-        authDomain: "project-1-e9716.firebaseapp.com",
-        databaseURL: "https://project-1-e9716.firebaseio.com",
-        projectId: "project-1-e9716",
-        storageBucket: "project-1-e9716.appspot.com",
-        messagingSenderId: "359911792247",
-        appId: "1:359911792247:web:35b92d2cc78970ac"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    var database = firebase.database();
-
-        //push values to
-        database.ref().push({
-            userFirstName: firstName,
-            userLastName: lastName,
-            userEmail: email,
-            userCity: city,
-            userState: state,
-            userZipcode: zip
-        })
-    });
-
-
     // proof of ending script without bugs
     console.log("end of script");
-
-
-
+    
+});
