@@ -14,6 +14,14 @@ $(document).ready(function () {
     var audio = $("#intermission")[0];
     var checkBox = 0;
 
+    //Initial Values
+    var firstName = "";
+    var lastName = "";
+    var email = "";
+    var city = "";
+    var state = "";
+    var zip = 0;
+
     // audio controls
     $(document).on("click", "#playBtn", function () {
         event.preventDefault();
@@ -103,8 +111,8 @@ $(document).ready(function () {
         }else{
             setInterval(function(){$(".loadingScreen").hide(); imageRender(); $("#playBtn").show();
             $("#pauseBtn").show();}, 14600); clearInterval();
-            audio.play();    
-
+            audio.play(); 
+        };
     });
 
     function imageRender() {
@@ -264,8 +272,36 @@ $(document).ready(function () {
         }
     ]
 
+    //FIREBASE
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDxMo9zE0YGmDVzh6O0BHDPA9ClufzCQ0E",
+        authDomain: "project-1-e9716.firebaseapp.com",
+        databaseURL: "https://project-1-e9716.firebaseio.com",
+        projectId: "project-1-e9716",
+        storageBucket: "project-1-e9716.appspot.com",
+        messagingSenderId: "359911792247",
+        appId: "1:359911792247:web:35b92d2cc78970ac"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var database = firebase.database();
+
+        //push values to
+        database.ref().push({
+            userFirstName: firstName,
+            userLastName: lastName,
+            userEmail: email,
+            userCity: city,
+            userState: state,
+            userZipcode: zip
+        })
+    });
+
+
     // proof of ending script without bugs
     console.log("end of script");
 
-});
+
 
