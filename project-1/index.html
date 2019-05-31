@@ -24,7 +24,7 @@
 
     <!-- Navigation Bar  -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-        <a class="navbar-brand" href="https://volksrat71.github.io/project-1/">            
+        <a class="navbar-brand" href="https://volksrat71.github.io/project-1/project-1/index.html">            
             <img src="assets/images/icon-camper.png" width="42" height="30" class="d-inline-block align-top" alt="">
             RoadtripperZzz
         </a>
@@ -33,8 +33,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="https://volksrat71.github.io/project-1/">We Pick</a>
-                <a class="nav-item nav-link" href="#">You Pick</a>
+                <a class="nav-item nav-link" href="https://volksrat71.github.io/project-1/project-1/index.html">We Pick</a>
+                <a class="nav-item nav-link" href="../project-1/allLocations.html">You Pick</a>
                 <a class="nav-item nav-link" href="#">About</a>
             </div>
         </div>
@@ -99,19 +99,6 @@
                     </form>             
                 </div>
             </div>
-            <!-- Container for the results of your vacation-->
-<div class="container" id="results-container">
-        <div class="another-container" id= "results-container">
-            <h1 id="results-title"></h1>
-            <span id="placeContent"></span> <br></br>
-            <span id="coordinatesContent"></span> <br></br>
-            <span id="terrainContent"></span> <br></br>
-            <span id="descriptionContent"></span> <br></br>
-            <span id="weatherContent"></span> <br></br>
-            
-            <!-- <div><script type='text/javascript' id= 'weather'></script>         -->
-        </div>
-            </div>
             <!-- Destination Ad... -->
             <div class="col-sm-5 text-center">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -132,19 +119,36 @@
             </div>
         </div>
     </div>
-
-<!-- Container for the results of your vacation-->
-<div class="container" id="results-container">
-    <!-- div for the placement of the map -->
-    <!-- <div id="map-container">
-            <iframe
-            width="600"
-            height="450"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
-              &origin=Portland+Oregon&destination=Seattle+Washington" allowfullscreen>
-          </iframe>
+           
+    <!-- Container for the results of your vacation-->
+    <!-- <div class="container" id="results-container">
+        <div class="another-container" id= "results-container">
+            <h1 id="results-title"></h1>
+            <span id="placeContent"></span> <br></br>
+            <span id="coordinatesContent"></span> <br></br>
+            <span id="terrainContent"></span> <br></br>
+            <span id="descriptionContent"></span> <br></br>
+            <span id="weatherContent"></span> <br></br>
+        </div>
     </div> -->
+<div class="weather">
+        <div id="weather">
+                <script type=‘text/javascript’ src=‘https://darksky.net/widget/default/42.360082,-71.05888/us12/en.js?height=500&title=Full Forecast&textColor=333333&bgColor=FFFFFF&skyColor=333&fontFamily=Default&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes’></script>
+    
+        </div>
+</div>
+    <!-- Container for the results of your vacation-->
+    <div class="container" id="results-container">
+        <!-- div for the placement of the map -->
+        <div id="map-container">
+            <iframe
+                width="600"
+                height="450"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
+                &origin=Portland+Oregon&destination=Seattle+Washington" allowfullscreen>
+            </iframe>
+    </div>
 
 <!-- Container for the results of your vacation-->
 <div class="container" id="results-container">
@@ -175,6 +179,9 @@
             </div>
         </div>
     </div>
+
+    <div class="col-sm-10" id="locationDump"></div>
+
     <!-- Link jQuery -->
           <!-- NATE: dont use slim -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
