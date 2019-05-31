@@ -40,6 +40,43 @@
         </form>
     </nav>
     
+    <!-- Final Result -->
+    <div class="container" id="finalPage">
+
+        <!-- Loaction selected -->
+        <div class="locationResult">
+            <div class="row">
+                <div class="col-sm-10">    
+                    <div class="another-container" id= "results-container">
+                        <h1 id="results-title"></h1>
+                        <span id="placeContent"></span> <br></br>
+                        <span id="coordinatesContent"></span> <br></br>
+                        <span id="terrainContent"></span> <br></br>
+                        <span id="descriptionContent"></span> <br></br>
+                        <span id="weatherContent"></span> <br></br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Results -->
+        <div class="map">
+            <div class="row">
+                <div class="col-sm-10">
+                    <!-- Container for the results of your vacation -->
+                    <div class="container" id="results-container">
+                        <!-- div for the placement of the map -->
+                        <div id="map-container">
+                            <iframe width="600" height="450" frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
+                            &origin=Portland+Oregon&destination=Seattle+Washington" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- JavaScript DOM Hide on Load -->
     <div class="loadingScreen">
         <img class="loadingGif" src="assets/images/loading.gif">
@@ -110,43 +147,6 @@
                     </div>
                 </div>
             
-            </div>
-        </div>
-    </div>
-           
-    <!-- Final Result -->
-    <div class="container" id="finalPage">
-
-        <!-- Loaction selected -->
-        <div class="locationResult">
-            <div class="row">
-                <div class="col-sm-10">    
-                    <div class="another-container" id= "results-container">
-                        <h1 id="results-title"></h1>
-                        <span id="placeContent"></span> <br></br>
-                        <span id="coordinatesContent"></span> <br></br>
-                        <span id="terrainContent"></span> <br></br>
-                        <span id="descriptionContent"></span> <br></br>
-                        <span id="weatherContent"></span> <br></br>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Map Results -->
-        <div class="map">
-            <div class="row">
-                <div class="col-sm-10">
-                    <!-- Container for the results of your vacation -->
-                    <div class="container" id="results-container">
-                        <!-- div for the placement of the map -->
-                        <div id="map-container">
-                            <iframe width="600" height="450" frameborder="0" style="border:0"
-                            src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
-                            &origin=Portland+Oregon&destination=Seattle+Washington" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

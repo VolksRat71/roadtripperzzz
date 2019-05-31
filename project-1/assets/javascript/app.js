@@ -9,7 +9,7 @@ $(document).ready(function () {
     $("#pauseBtn").hide();
     $("#authenticate").hide();
     $("#locationDump").show();
-    $("#finalPage").show();
+    $("#finalPage").hide();
 
     // easter egg
     var audio = $("#intermission")[0];
@@ -42,6 +42,8 @@ $(document).ready(function () {
     // form submit 
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
+
+        $("#finalPage").show();
 
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
