@@ -5,6 +5,18 @@ body{
     background-attachment: fixed;
 }
 
+.locationImage{
+    margin-top: 125px;
+    height: 75%;
+    width: 75%;
+}
+
+.locationName{
+    color: white;
+    margin-top: -425px;
+    margin-left: 30px;
+}
+
 .navbar{
     height: 74px;
 }
