@@ -48,10 +48,11 @@ $(document).ready(function () {
         console.log(userState);
         console.log(userZipcode);
         
+        // THIS IS THE WEATHER API -Sam //
         function weatherReport() {
             var apiKey       = '998f56179b95a092c3fac99f4273aaab',
             url          = 'https://api.darksky.net/forecast/',
-            longi        = -123.5706,
+            longi        = -123.5706,                                   //**HELP ///*/ need these to go to the array
             lati         = 45.7440,
             queryURL     = "https://cors-anywhere.herokuapp.com/" + url + apiKey + "/" + lati + "," + longi;
             console.log(queryURL);
@@ -69,6 +70,7 @@ $(document).ready(function () {
                 
             })
         }
+        //THIS IS THE RANDOM LOCATION GENERATOR //
         var renderVacation= function(){
             randomResult= locations[Math.floor(Math.random()* locations.length)];
             console.log(randomResult);
@@ -77,7 +79,7 @@ $(document).ready(function () {
             $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
             $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
             $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
-            $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
+            
             
             // adding the map to the on click function
             $('#results-container').append("<iframe id='cameron' width='600' height='450' frameborder='0' style='border:0'</iframe>");
@@ -118,9 +120,10 @@ weatherReport();
             lati: "45.7440",
             longi: "-123.9410",
             terrain: "Coastal Forest",
-            description: "Neahkahnie Mountain is a mountain, or headland, on the Oregon Coast, north of Manzanita in Oswald West State Park overlooking U.S. Route 101. The peak is part of the Northern Oregon Coast Range, which is part of the Oregon Coast Range.[1] It is best known for stories of Spanish treasure said to be buried either at the foot of the mountain, or on its slopes."},
+            description: "Neahkahnie Mountain is a mountain, or headland, on the Oregon Coast, north of Manzanita in Oswald West State Park overlooking U.S. Route 101. The peak is part of the Northern Oregon Coast Range, which is part of the Oregon Coast Range.[1] It is best known for stories of Spanish treasure said to be buried either at the foot of the mountain, or on its slopes."
             // weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.7469,-123.9519/us12/en.js?width=100%&height=350&title=Neahkahnie Mountain&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>"        },
         
+        },
         //     {
         //     place: "Crack in the Ground",
         //     coordinates: "43.3336,-120.6723",
