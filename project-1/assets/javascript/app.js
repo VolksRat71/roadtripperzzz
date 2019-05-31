@@ -31,8 +31,7 @@ $(document).ready(function () {
     // form submit 
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
-
-        
+      
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
         var userLastName = $("#userLastName").val().trim();
@@ -73,6 +72,20 @@ $(document).ready(function () {
         }else{
         $(".loadingScreen").show();
         $(".container").hide();
+
+        var renderVacation= function(){
+            randomResult= locations[Math.floor(Math.random()* locations.length)];
+               console.log(randomResult);
+               $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
+               $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
+               $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
+               $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
+               $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
+               $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
+              
+        }
+
+        renderVacation();
         
         // Checkbox value check
         // loading simulator...
@@ -85,6 +98,14 @@ $(document).ready(function () {
         };
         };
     });
+
+    function imageRender() {
+        // console.log(locations[i].image);
+        $("#locationDump").append(locations[i].image);
+        // $("#locationDump").append(`<div class="locationName"> ${locations[i].place}</div>`);
+        // $("#locationDump").append(`<div class="locationDescription"> ${locations[i].description}</div>`);
+    }
+
 
     // list of locations
     var locations = [
@@ -235,6 +256,10 @@ $(document).ready(function () {
         }
     ]
 
+
+    for(i = 0; i < locations.length; i++){
+    imageRender();
+    }
 
     // proof of ending script without bugs
     console.log("end of script");
