@@ -12,6 +12,10 @@
     </audio>
 
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -55,33 +59,34 @@
                     <div class="card-header">Where will you go?<span id="authenticate">*required fields</span></div>
                     <form>
                         <!-- First Row -->
+                        <!--HERY!!!!!!!!!!! FIX THIS LATER!~!!!!!!!-->
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label id="first-name" for="userFirstName">First name</label>
-                                <input type="text" class="form-control" id="userFirstName" placeholder="First name" required>
+                                <input value="sam"  type="text" class="form-control" id="userFirstName" placeholder="First name" required>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="userLastName">Last name</label>
-                                <input type="text" class="form-control" id="userLastName" placeholder="Last name" required>
+                                <input value="sam" type="text" class="form-control" id="userLastName" placeholder="Last name" required>
                             </div>
                             <div class="col-md-5 mb-3">
                                 <label for="userEmail">Email</label>
-                                <input type="text" class="form-control" id="userEmail" placeholder="Email" required>
+                                <input value="sam" type="text" class="form-control" id="userEmail" placeholder="Email" required>
                             </div>
                         </div>
                         <!-- Second Row -->
                         <div class="form-row">
                             <div class="col-md-3 mb-3">
                                 <label for="userCity">City</label>
-                                <input type="text" class="form-control" id="userCity" placeholder="City" required>
+                                <input value="sam" type="text" class="form-control" id="userCity" placeholder="City" required>
                             </div>
                             <div class="col-md-5 mb-3">
                                 <label for="userState">State</label>
-                                <input type="text" class="form-control" id="userState" placeholder="State" required>
+                                <input value="sam" type="text" class="form-control" id="userState" placeholder="State" required>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="userZipcode">Zip</label>
-                                <input type="text" class="form-control" id="userZipcode" placeholder="Zip" required>
+                                <input value="sam" type="text" class="form-control" id="userZipcode" placeholder="Zip" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -102,15 +107,11 @@
             <span id="coordinatesContent"></span> <br></br>
             <span id="terrainContent"></span> <br></br>
             <span id="descriptionContent"></span> <br></br>
-<<<<<<< HEAD
-            <div class = "container" id="weatherContent1">
-                    <script type='text/javascript' src='https://darksky.net/widget/default/42.360082,-71.05888/us12/en.js?height=500&title=Full Forecast&textColor=333333&bgColor=FFFFFF&skyColor=333&fontFamily=Default&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>
-                    <!-- <iframe id="forecast_embed" frameborder="0" height="245" width="100%" src="//forecast.io/embed/#lat=42.3583&lon=-71.0603&name=Downtown Boston"></iframe> -->
-                </div> <br></br>
-=======
-            <span id="weatherContent"></s pan> <br></br>
->>>>>>> master
+            <span id="weatherContent"></span> <br></br>
+            
+            <!-- <div><script type='text/javascript' id= 'weather'></script>         -->
         </div>
+            </div>
             <!-- Destination Ad... -->
             <div class="col-sm-5 text-center">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -124,6 +125,7 @@
                         <div class="carousel-item">
                         <img class="d-block w-100" src="assets/images/coffee.jpg" alt="Third slide">
                         </div>
+                        <div class="container" id="results-container2"></div>
                     </div>
                 </div>
             
@@ -146,15 +148,15 @@
 
 <!-- Container for the results of your vacation-->
 <div class="container" id="results-container">
-    <div class="another-container" id= "results-container">
+    <div class="another-container" id= "results-container2">
         <h1 id="results-title"></h1>
         <span id="placeContent"></span> <br></br>
         <span id="coordinatesContent"></span> <br></br>
         <span id="terrainContent"></span> <br></br>
         <span id="descriptionContent"></span> <br></br>
-        <span id="weatherContent"></span> <br></br>
     </div>
 </div>
+<div class="container" id="weatherStuff"></div>
     <!-- Quote Card -->
     <div class="container">
         <div class="row">
@@ -174,7 +176,8 @@
         </div>
     </div>
     <!-- Link jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <!-- NATE: dont use slim -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <!-- Link Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
