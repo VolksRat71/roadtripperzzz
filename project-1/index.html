@@ -13,7 +13,7 @@
         <source src="assets/audio/The Offspring - Intermission.mp3">
         </source>
     </audio>
-<!-- KEEP THIS JQUERY- its the only way that the weather API will work-->
+    <!-- KEEP THIS JQUERY- its the only way that the weather API will work-->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script
     src="https://code.jquery.com/jquery-3.4.1.js"
@@ -47,34 +47,69 @@
     </nav>
 
     <!-- Final Result -->
-    <div id="finalPage">
+    <div class="container" id="finalPage">
 
         <!-- Loaction selected -->
         <div class="locationResult">
         </div>
-        
+
         <div class="row">
-            <div class="col-sm-10">
+            <div id="text-column" class="col-sm-6">
                 <div class="another-container" id="text-results-container">
                     <h1 id="results-title"></h1>
                     <span id="placeContent"></span> <br></br>
-                    <span id="coordinatesContent"></span> <br></br>
                     <span id="terrainContent"></span> <br></br>
                     <span id="descriptionContent"></span> <br></br>
                     <span id="weatherContent"></span> <br></br>
                 </div>
             </div>
+
+            <div class="col-sm-6">
+                <img id="image">
+            </div>
+
         </div>
         <!-- Map Results -->
         <div id="parnetMapContainer" class="map">
             <div class="row">
                 <div id="results-container" class="col-sm-6">
-                    <iframe id="map_frame" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
+                    <iframe id="map_frame" width="600" height="410" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
                             &origin=Portland+Oregon&destination=Seattle+Washington" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
+    <!------------------------------MODAL---------------------------------------------------->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+        </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="exampleModalLabel">Hey <span class="userID_place"></span>! Sign up for the RoadtripperZzz <img id="modalFormIcon" src="assets/images/icon-camper.png"> newsletter!<br>
+            Share your email with us and get the latest on best places to hike and camp, all off the beaten-path.</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div> 
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="userEmail" placeholder="Email" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="emailButton" type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- JavaScript DOM Hide on Load -->
     <div class="loadingScreen">
@@ -95,19 +130,15 @@
                     <form>
                         <!-- First Row -->
                         <div class="form-row">
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label id="first-name" for="userFirstName">First name</label>
                                 <input type="text" class="form-control" id="userFirstName" placeholder="First name"
                                     required>
                             </div>
-                            <div class="col-md-3 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="userLastName">Last name</label>
                                 <input type="text" class="form-control" id="userLastName" placeholder="Last name"
                                     required>
-                            </div>
-                            <div class="col-md-5 mb-3">
-                                <label for="userEmail">Email</label>
-                                <input type="email" class="form-control" id="userEmail" placeholder="Email" required><span id="validEmail"></span></div>
                             </div>
                         </div>
                         <!-- Second Row -->
@@ -153,7 +184,7 @@
 
             </div>
         </div>
-    
+
 
         <!-- Quote Card -->
         <div class="container">
@@ -178,7 +209,7 @@
 
     <div class="col-sm-10" id="locationDump"></div>
 
-    
+
     <!-- Link Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

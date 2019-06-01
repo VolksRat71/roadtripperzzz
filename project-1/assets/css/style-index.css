@@ -26,7 +26,7 @@ form{
     padding: 10px;
 }
 
-#myCarousel img {
+#myCarousel {
     border-radius: 5px;
     width: auto;  
     height: 320px;   
@@ -46,13 +46,49 @@ form{
      padding:auto;
  }
 
+ #text-col{
+     background-color: red;
+     max-height: 100%;
+     
+ }
+
  #authenticate{
      color:red;
      font-size: 12px;
      float: right;
  }
 
- #map_frame{
-     margin:25px;
+ #image{
+     max-height: 100%;
+     max-width: 100%;
  }
 
+ #text-results-container{
+     padding-bottom: 20px;
+ }
+
+ /* Modal Style */
+ #modalFormIcon {
+    width: 10%;
+}
+.modal-header {
+    border-bottom: none;
+}
+.modal-body {
+    padding-bottom: 0;
+}
+.modal-title {
+    text-align: center;
+}
+.modal-footer {
+    border-top: none;
+    padding-bottom: 0;
+}
+#emailButton {
+    background-color: rgb(41, 43, 44);
+    color: white;
+}
+
+#emailButton.btn-primary {
+    border-color: white;
+}
