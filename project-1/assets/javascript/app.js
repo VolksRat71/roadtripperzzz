@@ -103,10 +103,11 @@ $(document).ready(function () {
             $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
             $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
             $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
+            
             var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+userState+"&destination="+randomResult.place
 
-            // adding the map to the on click function
-            $('#results-container').empty();
+
+            $('#results-container').show();
             $('#map_frame').attr("src",mapUrl);
             // console.log(mapUrl);
         }
