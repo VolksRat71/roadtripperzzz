@@ -146,12 +146,18 @@ $(document).ready(function () {
             //get values from form
             email = $("#userEmail").val().trim();
             console.log(email);
-
-            //push values to
-
-            database.ref().push({
-            userEmail: email
-            })
+            function isEmail(email) {
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                return regex.test(email);
+              }
+              if (isEmail(email)){
+                  console.log("email is valid");
+                  //push values to
+      
+                  database.ref().push({
+                  userEmail: email
+                  })
+              }
         });
 
         //Send user name to Modal
