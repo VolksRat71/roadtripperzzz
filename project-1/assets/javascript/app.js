@@ -64,17 +64,16 @@ $(document).ready(function () {
             $("#authenticate").show();
         } else {
             $(".loadingScreen").show();
-            // $(".container").hide();
-            
+            $(".formCard").hide();
+
             // Checkbox value check
             // loading simulator...
             if (checkBox%2 == 0){
-                setInterval(function(){$(".loadingScreen").hide(); clearInterval();
-            }, 3000); 
+            setInterval(function(){$(".loadingScreen").hide(); clearInterval();  $("#finalPage").show();}, 3000); 
         }else{
             audio.play(); 
-            setInterval(function(){$(".loadingScreen").hide(); $("#pauseBtn").show(); $("#playBtn").show(); clearInterval();}, 14600);
-        };
+            setInterval(function(){$(".loadingScreen").hide(); $("#pauseBtn").show(); $("#playBtn").show(); clearInterval(); $("#finalPage").show();}, 14600);
+        };;
         
         var renderVacation= function(){
             randomResult= locations[Math.floor(Math.random()* locations.length)];
@@ -89,11 +88,7 @@ $(document).ready(function () {
             var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+userState+"&destination="+randomResult.place
 
             $('#results-container').empty();
-            // adding the map to the on click function
-            // $('#       results-container').append("<iframe id='map_frame' width='600' height='450' frameborder='0' style='border:0'</iframe>");
-            // $("#map_frame").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+", "+userState+"&destination="+randomResult.place+",Oregon");
             $('#map_frame').attr("src",mapUrl);
-            $("#finalPage").show();
             console.log(mapUrl);
         }
         renderVacation();
