@@ -19,6 +19,8 @@
     src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
+    <!-- this links the validation for email address- sam -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
 </head>
 
 <body>
@@ -105,7 +107,7 @@
                             </div>
                             <div class="col-md-5 mb-3">
                                 <label for="userEmail">Email</label>
-                                <input type="text" class="form-control" id="userEmail" placeholder="Email" required>
+                                <input type="email" class="form-control" id="userEmail" placeholder="Email" required><span id="validEmail"></span></div>
                             </div>
                         </div>
                         <!-- Second Row -->

@@ -42,8 +42,7 @@ $(document).ready(function () {
     // form submit 
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
-
-        
+       
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
         var userLastName = $("#userLastName").val().trim();
@@ -51,6 +50,7 @@ $(document).ready(function () {
         var userCity = $("#userCity").val().trim();
         var userState = $("#userState").val().trim();
         var userZipcode = $("#userZipcode").val().trim();
+        
         
         // form authentication
         if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
@@ -198,7 +198,7 @@ $(document).ready(function () {
         {
             place: "Painted Hills",
             lati: "44.6615",
-            longi:"-120.2730",
+            longi:"-120.2731",
             terrain: "Desert",
             description: "is one of the three units of the John Day Fossil Beds National Monument, located in Wheeler County, Oregon.Painted Hills is named after the colorful layers of its hills corresponding to various geological eras, formed when the area was an ancient river floodplain.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/44.6476,-120.2607/us12/en.js?width=100%&height=350&title=Painted Hills&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
@@ -255,20 +255,11 @@ $(document).ready(function () {
             image: "<img class='locationImage' src='./assets/images/locationImages/West Eagle Meadow Campground.jpg>"
 
         },
-        {
-            place: "Dixie Campground (Malheur National Forest)",
-            lati: "44.534823",
-            longi:  "-118.5879",
-            terrain: "Wooded (Ponderosa)",
-            description: "This is a great destination for berry picking, it is also a wonderful base camp for anyone wanting to hike, hunt or just explore the Malheur National Forest.",
-            weather: "<script type='text/javascript' src='https://darksky.net/widget/default/44.2049,-119.327/us12/en.js?width=100%&height=350&title=Malheur National Forest, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
-            image: "<img class='locationImage' src='./assets/images/locationImages/Dixie Campground.jpg>"
-
-        },
+        
         {
             place: "Haystack Rock, Cannon Beach",
             lati: "43.0861",
-            longi: "-124.4383",
+            longi: "",
             terrain: "Beach",
             description: "Visitors to Haystack Rock can view many species of marine wildlife in their natural habitat during low tide.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.8844,-123.9684/us12/en.js?width=100%&height=350&title=Haystack Rock, Cannon Beach, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
