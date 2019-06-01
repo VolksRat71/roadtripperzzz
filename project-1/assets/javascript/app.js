@@ -43,14 +43,14 @@ $(document).ready(function () {
         event.preventDefault();
        
         // form value trims
-        var userFirstName = $("#userFirstName").val().trim();
-        var userLastName = $("#userLastName").val().trim();
-        var userCity = $("#userCity").val().trim();
-        var userState = $("#userState").val().trim();
+        firstName = $("#userFirstName").val().trim();
+        lastName = $("#userLastName").val().trim();
+        city = $("#userCity").val().trim();
+        state = $("#userState").val().trim();
         
         
         // form authentication
-        if(userFirstName, userLastName, userCity, userState === ""){
+        if(firstName, lastName, city, state === ""){
             $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
             $("#authenticate").show();
         } else {
@@ -133,8 +133,7 @@ $(document).ready(function () {
             userFirstName: firstName,
             userLastName: lastName,
             userCity: city,
-            userState: state,
-            userZipcode: zip
+            userState: state
         })
         };
 
