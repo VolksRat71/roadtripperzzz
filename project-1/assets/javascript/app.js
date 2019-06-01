@@ -89,7 +89,7 @@ $(document).ready(function () {
             // adding the map to the on click function
             $('#results-container').empty();
             $('#results-container').append("<iframe id='map_frame' width='600' height='450' frameborder='0' style='border:0'</iframe>");
-            $("#map_frame").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+","+userState+"&destination="+randomResult.place+",Oregon");
+            $("#map_frame").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+", "+userState+"&destination="+randomResult.place+",Oregon");
             $("#finalPage").show();
         }
         renderVacation();
