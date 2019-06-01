@@ -82,7 +82,7 @@ $(document).ready(function () {
             }).then(function (response){
                 console.log(response);
                 console.log(response.daily.data);
-                $("#text-results-container").append("<h4>" + response.daily.summary + "</h4>") 
+                $("#forecast-container").append("<h4>" + response.daily.summary + "</h4>") 
             })
         }
 
