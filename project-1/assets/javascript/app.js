@@ -317,16 +317,7 @@ $(document).ready(function () {
             image: './assets/images/locationImages/Multnomah Falls.jpg'
 
         },
-        {
-            place: "Oregon Badlands Wilderness",
-            lati: "44.0112",
-            longi: "-121.0009",
-            terrain: "Desert",
-            description: "The area is known for igneous castle-like rock formations, harsh terrain, ancient Juniper trees, sagebrush, and extensive arid land. A great place to hike and camp.",
-            weather: "<script type='text/javascript' src='https://darksky.net/widget/default/44.0033,-121.0231/us12/en.js?width=100%&height=350&title=Oregon Badlands Wilderness, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
-            image: './assets/images/locationImages/Oregon Badlands Wilderness.jpg'
-
-        }
+        
     ]
 
     // proof of ending script without bugs
