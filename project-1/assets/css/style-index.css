@@ -43,11 +43,16 @@ form{
      background-color: white;
      border: 1px solid black;
      color: blue;
+     padding:auto;
  }
 
  #authenticate{
      color:red;
      font-size: 12px;
      float: right;
+ }
+
+ #map_frame{
+     margin:25px;
  }
 
