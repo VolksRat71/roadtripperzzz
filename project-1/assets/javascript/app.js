@@ -21,7 +21,6 @@ $(document).ready(function () {
     var email = "";
     var city = "";
     var state = "";
-    var zip = 0;
 
     // audio controls
     $(document).on("click", "#playBtn", function () {
@@ -48,11 +47,10 @@ $(document).ready(function () {
         var userLastName = $("#userLastName").val().trim();
         var userCity = $("#userCity").val().trim();
         var userState = $("#userState").val().trim();
-        var userZipcode = $("#userZipcode").val().trim();
         
         
         // form authentication
-        if(userFirstName, userLastName, userCity, userState, userZipcode === ""){
+        if(userFirstName, userLastName, userCity, userState === ""){
             $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
             $("#authenticate").show();
         } else {
