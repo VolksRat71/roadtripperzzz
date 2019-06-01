@@ -81,16 +81,20 @@ $(document).ready(function () {
             console.log(randomResult);
             $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
             $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
+            console.log(randomResult.place)
             $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
             $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
             $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
             $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
-            
+            var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+userState+"&destination="+randomResult.place
+
             // adding the map to the on click function
             $('#results-container').empty();
-            $('#results-container').append("<iframe id='map_frame' width='600' height='450' frameborder='0' style='border:0'</iframe>");
-            $("#map_frame").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+", "+userState+"&destination="+randomResult.place+",Oregon");
+            // $('#       results-container').append("<iframe id='map_frame' width='600' height='450' frameborder='0' style='border:0'</iframe>");
+            // $("#map_frame").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+", "+userState+"&destination="+randomResult.place+",Oregon");
+            $('#map_frame').attr("src",mapUrl);
             $("#finalPage").show();
+            console.log(mapUrl);
         }
         renderVacation();
         console.log('about to hide');
@@ -248,7 +252,7 @@ $(document).ready(function () {
         },
         // Nate's Locations
         {
-            name: "Devils Punch Bowl",
+            place: "Devils Punch Bowl",
             coordinates: "44.7472°N, 122.0637°W",
             terrain: "Coast",
             description: "Along the beautiful Oregon Coast. It is centered on a large bowl naturally carved in a rock headland which is partially open to the Pacific Ocean.",
@@ -257,7 +261,7 @@ $(document).ready(function () {
 
         },
         {
-            name: "Multnomah Falls",
+            place: "Multnomah Falls",
             coordinates: "45.5762°N, 122.1158°W",
             terrain: "Forest",
             description: "Two consecutive waterfalls & beautiful hiking with a bridge along the Columbia Gorge. Visit the Multnomah Falls lodge built in 1925.",
@@ -266,7 +270,7 @@ $(document).ready(function () {
 
         },
         {
-            name: "Oregon Badlands Wilderness",
+            place: "Oregon Badlands Wilderness",
             coordinates: "44.0112°N, 121.0009°W",
             terrain: "Desert",
             description: "The area is known for igneous castle-like rock formations, harsh terrain, ancient Juniper trees, sagebrush, and extensive arid land. A great place to hike and camp.",
