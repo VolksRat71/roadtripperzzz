@@ -145,6 +145,7 @@ $(document).ready(function () {
 
             //get values from form
             email = $("#userEmail").val().trim();
+            console.log(email);
 
             //push values to
 
