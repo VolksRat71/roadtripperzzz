@@ -58,12 +58,12 @@ form{
      float: right;
  }
 
- #map_frame{
-     margin:25px;
- }
-
  #image{
      max-height: 100%;
      max-width: 100%;
+ }
+
+ #text-results-container{
+     padding-bottom: 20px;
  }
 

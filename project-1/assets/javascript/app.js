@@ -97,7 +97,6 @@ $(document).ready(function () {
             // console.log(randomResult);
             $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
             $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
-            $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
             $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
             $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
             $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
@@ -199,7 +198,7 @@ $(document).ready(function () {
         {
             place: "Painted Hills",
             lati: "44.6615",
-            longi:"-120.2730",
+            longi: "-120.2730",
             terrain: "Desert",
             description: "is one of the three units of the John Day Fossil Beds National Monument, located in Wheeler County, Oregon.Painted Hills is named after the colorful layers of its hills corresponding to various geological eras, formed when the area was an ancient river floodplain.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/44.6476,-120.2607/us12/en.js?width=100%&height=350&title=Painted Hills&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
@@ -228,7 +227,7 @@ $(document).ready(function () {
         {
             place: "Cougar Resovoir Hot Springs",
             lati: "44.0830",
-            longi: "122.2384",
+            longi: "-122.2384",
             terrain: "Forest",
             description: "Terwilliger Hot Springs, also known as Cougar Hot Springs, are geothermal pools in the Willamette National Forest in the U.S.state of Oregon, 53 miles(85 km) east of Eugene.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.3012,-122.947/us12/en.js?width=100%&height=350&title=Cougar Resovoir Hot Springs, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
