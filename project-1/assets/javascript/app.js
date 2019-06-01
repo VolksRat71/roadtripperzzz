@@ -87,7 +87,8 @@ $(document).ready(function () {
             
             var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+userState+"&destination="+randomResult.place
 
-            $('#results-container').empty();
+
+            $('#results-container').show();
             $('#map_frame').attr("src",mapUrl);
             console.log(mapUrl);
         }
