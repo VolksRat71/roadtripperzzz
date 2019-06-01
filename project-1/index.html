@@ -75,6 +75,37 @@
             </div>
         </div>
     </div>
+    <!------------------------------MODAL---------------------------------------------------->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+        </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="exampleModalLabel">Hey <span class="userID_place"></span>! Sign up for the RoadtripperZzz <img id="modalFormIcon" src="assets/icon-camper.png"> newsletter!<br>
+            Share your email with us and get the latest on best places to hike and camp, all off the beaten-path.</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div> 
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="userEmail" placeholder="Email" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="emailButton" type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- JavaScript DOM Hide on Load -->
     <div class="loadingScreen">
@@ -95,19 +126,15 @@
                     <form>
                         <!-- First Row -->
                         <div class="form-row">
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label id="first-name" for="userFirstName">First name</label>
                                 <input type="text" class="form-control" id="userFirstName" placeholder="First name"
                                     required>
                             </div>
-                            <div class="col-md-3 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label for="userLastName">Last name</label>
                                 <input type="text" class="form-control" id="userLastName" placeholder="Last name"
                                     required>
-                            </div>
-                            <div class="col-md-5 mb-3">
-                                <label for="userEmail">Email</label>
-                                <input type="text" class="form-control" id="userEmail" placeholder="Email" required>
                             </div>
                         </div>
                         <!-- Second Row -->
