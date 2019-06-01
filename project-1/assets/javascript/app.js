@@ -43,8 +43,7 @@ $(document).ready(function () {
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
 
-        $("#finalPage").show();
-
+        
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
         var userLastName = $("#userLastName").val().trim();
@@ -58,25 +57,25 @@ $(document).ready(function () {
         console.log(userCity);
         console.log(userState);
         console.log(userZipcode);
-           
+        
         // form authentication
         if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
-        $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
-        $("#authenticate").show();
+            $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
+            $("#authenticate").show();
         } else {
-        $(".loadingScreen").show();
-        $(".container").hide();
-
-        // Checkbox value check
-        // loading simulator...
-        if (checkBox%2 == 0){
-        setInterval(function(){$(".loadingScreen").hide(); clearInterval();
-        }, 3000); 
+            $(".loadingScreen").show();
+            // $(".container").hide();
+            
+            // Checkbox value check
+            // loading simulator...
+            if (checkBox%2 == 0){
+                setInterval(function(){$(".loadingScreen").hide(); clearInterval();
+            }, 3000); 
         }else{
             audio.play(); 
             setInterval(function(){$(".loadingScreen").hide(); $("#pauseBtn").show(); $("#playBtn").show(); clearInterval();}, 14600);
         };
-
+        
         var renderVacation= function(){
             randomResult= locations[Math.floor(Math.random()* locations.length)];
             console.log(randomResult);
@@ -86,14 +85,19 @@ $(document).ready(function () {
             $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
             $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
             $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
-
+            
             // adding the map to the on click function
             $('#results-container').empty();
             $('#results-container').append("<iframe id='map_frame' width='600' height='450' frameborder='0' style='border:0'</iframe>");
             $("#map_frame").attr("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+","+userState+"&destination="+randomResult.place+",Oregon");
+            $("#finalPage").show();
         }
-        
         renderVacation();
+        console.log('about to hide');
+        $('#form').hide();
+    $('#parnetMapContainer').show();
+    
+    
         
         //FIREBASE
         // Your web app's Firebase configuration
