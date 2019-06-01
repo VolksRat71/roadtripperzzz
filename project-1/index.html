@@ -49,20 +49,20 @@
 
         <!-- Loaction selected -->
         <div class="locationResult">
-            <div class="row">
-                <div class="col-sm-10">
-                    <div class="another-container" id="results-container">
-                        <h1 id="results-title"></h1>
-                        <span id="placeContent"></span> <br></br>
-                        <span id="coordinatesContent"></span> <br></br>
-                        <span id="terrainContent"></span> <br></br>
-                        <span id="descriptionContent"></span> <br></br>
-                        <span id="weatherContent"></span> <br></br>
-                    </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="another-container" id="text-results-container">
+                    <h1 id="results-title"></h1>
+                    <span id="placeContent"></span> <br></br>
+                    <span id="coordinatesContent"></span> <br></br>
+                    <span id="terrainContent"></span> <br></br>
+                    <span id="descriptionContent"></span> <br></br>
+                    <span id="weatherContent"></span> <br></br>
                 </div>
             </div>
         </div>
-
         <!-- Map Results -->
         <div id="parnetMapContainer" class="map">
             <div class="row">
@@ -79,13 +79,12 @@
         <img class="loadingGif" src="assets/images/loading.gif">
     </div>
 
-    <!-- Setup for future DOM functions -->
-    <div class="formCard">
-    <!-- form -->
+
+    <!-- Form -->
     <div id="form" class="container">
         <div class="row">
-            <div class="col-sm-7">   
-                <div class="card text-white bg-dark">    
+            <div class="col-sm-7">
+                <div class="card text-white bg-dark">
                     <!-- Title -->
                     <div class="card-header">Where will you go?<span id="authenticate">*required fields</span></div>
                     <form>
@@ -93,11 +92,13 @@
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label id="first-name" for="userFirstName">First name</label>
-                                <input type="text" class="form-control" id="userFirstName" placeholder="First name" required>
+                                <input type="text" class="form-control" id="userFirstName" placeholder="First name"
+                                    required>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="userLastName">Last name</label>
-                                <input type="text" class="form-control" id="userLastName" placeholder="Last name" required>
+                                <input type="text" class="form-control" id="userLastName" placeholder="Last name"
+                                    required>
                             </div>
                             <div class="col-md-5 mb-3">
                                 <label for="userEmail">Email</label>
@@ -122,11 +123,11 @@
                         <div class="form-group">
                             <div class="form-check">
                                 <input id="checkBox" class="form-check-input" type="checkbox" value="" required>
-                                    <label class="form-check-label">Cue the music</label>
+                                <label class="form-check-label">Cue the music</label>
                             </div>
                         </div>
                         <button id="loadButton" class="btn btn-outline-light" type="submit">Load up, bud!</button>
-                    </form>             
+                    </form>
                 </div>
             </div>
             <!-- Destination Ad... -->
@@ -134,21 +135,21 @@
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img class="d-block w-100" src="assets/images/sickAssBus.jpg" alt="First slide">
+                            <img class="d-block w-100" src="assets/images/sickAssBus.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/images/camp.jpg" alt="Second slide">
+                            <img class="d-block w-100" src="assets/images/camp.jpg" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="assets/images/coffee.jpg" alt="Third slide">
+                            <img class="d-block w-100" src="assets/images/coffee.jpg" alt="Third slide">
                         </div>
                     </div>
                 </div>
-            
+
             </div>
         </div>
     </div>
-    
+
     <!-- Quote Card -->
     <div class="container">
         <div class="row">
@@ -159,15 +160,17 @@
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
-                        <p>“Live life with no excuses, travel with no regret”</p>
-                        <footer class="blockquote-footer">The Compleat Angler author <cite title="Source Title">Izaak Walton</cite></footer>
+                            <p>“Live life with no excuses, travel with no regret”</p>
+                            <footer class="blockquote-footer">The Compleat Angler author <cite
+                                    title="Source Title">Izaak Walton</cite></footer>
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="col-sm-10" id="locationDump"></div>
 
     <!-- Link jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
