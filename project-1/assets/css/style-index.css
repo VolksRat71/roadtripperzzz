@@ -26,7 +26,7 @@ form{
     padding: 10px;
 }
 
-#myCarousel img {
+#myCarousel {
     border-radius: 5px;
     width: auto;  
     height: 320px;   
@@ -46,6 +46,12 @@ form{
      padding:auto;
  }
 
+ #text-col{
+     background-color: red;
+     max-height: 100%;
+     
+ }
+
  #authenticate{
      color:red;
      font-size: 12px;
@@ -54,5 +60,10 @@ form{
 
  #map_frame{
      margin:25px;
+ }
+
+ #image{
+     max-height: 100%;
+     max-width: 100%;
  }
 
