@@ -47,13 +47,12 @@ $(document).ready(function () {
         // form value trims
         var userFirstName = $("#userFirstName").val().trim();
         var userLastName = $("#userLastName").val().trim();
-        var userEmail = $("#userEmail").val().trim();
         var userCity = $("#userCity").val().trim();
         var userState = $("#userState").val().trim();
         var userZipcode = $("#userZipcode").val().trim();
         
         // form authentication
-        if(userFirstName, userLastName, userEmail, userCity, userState, userZipcode === ""){
+        if(userFirstName, userLastName, userCity, userState, userZipcode === ""){
             $('body').append('<style>input[type="text"]::-webkit-input-placeholder{color: red}</style>');
             $("#authenticate").show();
         } else {
@@ -135,13 +134,35 @@ $(document).ready(function () {
         database.ref().push({
             userFirstName: firstName,
             userLastName: lastName,
-            userEmail: email,
             userCity: city,
             userState: state,
             userZipcode: zip
         })
         };
+
+        //MODAL
+        $("#emailButton").on("click", function (event) {
+
+            //get values from form
+            email = $("#userEmail").val().trim();
+
+            //push values to
+
+            database.ref().push({
+            userEmail: email
+            })
+        });
+
+        //Send user name to Modal
+        database.ref().limitToLast(1).on("child_added", function(snapshot){ 
+            var data = snapshot.val();
+
+            var newUser = data.userFirstName;
+
+            $(".userID_place").text(newUser);
+        })
     });
+
 
     // list of locations
     var locations = [
