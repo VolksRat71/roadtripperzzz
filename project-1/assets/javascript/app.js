@@ -27,13 +27,13 @@ $(document).ready(function () {
     $(document).on("click", "#playBtn", function () {
         event.preventDefault();
         audio.play();
-        console.log("Play Audio");
+        // console.log("Play Audio");
     });
 
     $(document).on("click", "#pauseBtn", function () {
         event.preventDefault();
         audio.pause();
-        console.log("Pause Audio");
+        // console.log("Pause Audio");
     });
 
     $(document).on("click", "#checkBox", function (){
@@ -73,21 +73,19 @@ $(document).ready(function () {
         var location= locations[Math.floor(Math.random()* locations.length)];
         var lati= location.lati;
         var longi= location.longi;
-        console.log(location, lati, longi);
+        // console.log(location, lati, longi);
         function weatherReport() {
             var apiKey       = '998f56179b95a092c3fac99f4273aaab',
             url          = 'https://api.darksky.net/forecast/'
             queryURL     = "https://cors-anywhere.herokuapp.com/" + url + apiKey + "/" + lati + "," + longi;
-            console.log(queryURL);
+            // console.log(queryURL);
             $.ajax({
                 url: queryURL,
                 method: "GET"
             }).then(function (response){
+                console.log(response);
                 console.log(response.daily.data);
-                for(var i=0; i<response.daily.data.length; i++){
-                    $("#weatherStuff").append("<h4>" + response.daily.data[i].summary + "</h4>")
-                }
-                
+                $("#text-results-container").append("<h4>" + response.daily.summary + "</h4>") 
             })
         }
 
@@ -96,7 +94,7 @@ $(document).ready(function () {
 // this generates a random location //
         var renderVacation= function(){
             randomResult= locations[Math.floor(Math.random()* locations.length)];
-            console.log(randomResult);
+            // console.log(randomResult);
             $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
             $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
             $("#coordinatesContent").text("Coordinates:" + " " + randomResult.coordinates)
