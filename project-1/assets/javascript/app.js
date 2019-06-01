@@ -279,7 +279,7 @@ $(document).ready(function () {
         },
         // Nate's Locations
         {
-            name: "Devils Punch Bowl",
+            place: "Devils Punch Bowl",
             lati: "44.7472",
             longi: "-122.0637",
             terrain: "Coast",
@@ -289,7 +289,7 @@ $(document).ready(function () {
 
         },
         {
-            name: "Multnomah Falls",
+            place: "Multnomah Falls",
             lati: "45.5762",
             longi: "-122.1158",
             terrain: "Forest",
@@ -299,7 +299,7 @@ $(document).ready(function () {
 
         },
         {
-            name: "Oregon Badlands Wilderness",
+            place: "Oregon Badlands Wilderness",
             lati: "44.0112",
             longi: "-121.0009",
             terrain: "Desert",
