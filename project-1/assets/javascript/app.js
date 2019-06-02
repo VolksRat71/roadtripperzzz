@@ -105,11 +105,7 @@ $(document).ready(function () {
             }).then(function (response){
                 console.log(response);
                 console.log(response.daily.data);
-<<<<<<< HEAD
-                $("#text-results-container").append("<h4>" + response.daily.summary + "</h4>") 
-=======
                 $("#text-results-container").append("<p>" + response.daily.summary + "</p>") 
->>>>>>> f2b10f12506684878103f362738ab97aceb4bd4c
             })
         }
 
