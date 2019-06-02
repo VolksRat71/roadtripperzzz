@@ -10,6 +10,9 @@ $(document).ready(function () {
     $("#authenticate").hide();
     $("#locationDump").show();
     $("#finalPage").hide();
+    $(".mainPage").show();
+    $(".descriptionPage").hide();
+    $(".mapPage").hide();
 
     // easter egg
     var audio = $("#intermission")[0];
@@ -38,6 +41,26 @@ $(document).ready(function () {
     $(document).on("click", "#checkBox", function (){
         checkBox += 1;
     })
+    
+    // final page link controls
+    $(document).on("click", ".place", function (){
+        $(".mainPage").show();
+        $(".descriptionPage").hide();
+        $(".mapPage").hide();
+    });
+
+    $(document).on("click", ".description", function (){
+        $(".mainPage").hide();
+        $(".descriptionPage").show();
+        $(".mapPage").hide();
+    });
+
+    $(document).on("click", ".maps", function (){
+        $(".mainPage").hide();
+        $(".descriptionPage").hide();
+        $(".mapPage").show();
+    });
+    
     // form submit 
     $(document).on("click", "#loadButton", function () {
         event.preventDefault();
@@ -82,7 +105,11 @@ $(document).ready(function () {
             }).then(function (response){
                 console.log(response);
                 console.log(response.daily.data);
+<<<<<<< HEAD
                 $("#text-results-container").append("<h4>" + response.daily.summary + "</h4>") 
+=======
+                $("#text-results-container").append("<p>" + response.daily.summary + "</p>") 
+>>>>>>> f2b10f12506684878103f362738ab97aceb4bd4c
             })
         }
 
@@ -92,12 +119,10 @@ $(document).ready(function () {
         var renderVacation= function(){
             randomResult= locations[Math.floor(Math.random()* locations.length)];
             // console.log(randomResult);
-            $("#results-title").text("HERE ARE YOUR RANDOM ROADTRIP RESULTS!");
             $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
             $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
-            $("#descriptionContent").text("A Brief Description:" + " " + randomResult.description);
+            $("#descriptionContent").text("Description:" + " " + randomResult.description);
             $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
-            $('#image').attr("src",randomResult.image)
             
             var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+userState+"&destination="+randomResult.place
 
@@ -108,7 +133,7 @@ $(document).ready(function () {
         }
         renderVacation();
         $('#form').hide();
-    $('#parnetMapContainer').show();
+        $('#parnetMapContainer').show();
     
     
         
@@ -164,7 +189,10 @@ $(document).ready(function () {
             var newUser = data.userFirstName;
 
             $(".userID_place").text(newUser);
+
+            $(".finalMainHeader").text("We got you " + newUser)
         })
+
     });
 
 
