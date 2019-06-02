@@ -49,56 +49,74 @@
     <!----------------------------------------------- Final Result ------------------------->
     <div class="container" id="finalPage">
 
-        <!-- Loaction selected -->
-        <div class="locationResult">
-        </div>
+        <h1 class="finalMainHeader"></h1>
 
-        <div class="row">
-            <div id="text-column" class="col-sm-6">
-                <div class="another-container" id="text-results-container">
-                    <h1 id="results-title"></h1>
-                    <span id="placeContent"></span> <br></br>
-                    <span id="terrainContent"></span> <br></br>
-                    <span id="descriptionContent"></span> <br></br>
-                </div>
+        <div class="card text-white bg-dark final">
+            <div class="card-header lastButtons">
+                <ul class="nav lastButtons">
+                    <div id="card-button">
+                        <button type="button" id="card-button" class="btn btn-outline-light place">Location</button>
+                        <button type="button" id="card-button" class="btn btn-outline-light description">Description</button>
+                        <button type="button" id="card-button" class="btn btn-outline-light maps">Maps</button>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="mainPage text-center">
+                <p class="card-text">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <img src="..." class="card-img-top" alt="...">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </p>
+                <button type="button" id="subscribe" class="btn btn-light btn-lg" data-toggle="modal" data-target="#exampleModal">Subscribe</button>
             </div>
             
-            <div class="col-sm-6">
-                <img id="image">
+            <div class="descriptionPage">
+                <h5 class="card-title">Whats it like there?</h5>
+                <p class="card-text">
+                    <div id="text-column" class="col-sm-6">
+                        <div class="another-container" id="text-results-container">
+                            <h1 id="results-title"></h1>
+                            <span id="placeContent"></span> <br></br>
+                            <span id="terrainContent"></span> <br></br>
+                            <span id="descriptionContent"></span> <br></br>
+                            <span id="weatherContent"></span> <br></br>
+                        </div>
+                    </div>
+                </p>
+                <button type="button" id="subscribe" class="btn btn-light btn-lg" data-toggle="modal" data-target="#exampleModal">Subscribe</button>
             </div>
             
-        </div>
-        <!-- Map Results -->
-        <div id="parnetMapContainer" class="map">
-            <div class="row">
-                <div id="results-container" class="col-sm-6">
-                    <iframe id="map_frame" width="100%" height="410" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
-                    &origin=Portland+Oregon&destination=Seattle+Washington" allowfullscreen></iframe>
-                </div>
-                <!-- forecast text -->
-                <div id="forecast-container" class="col-sm-6">
-                        <span id="weatherContent"></span> <br></br>
-
-                </div>
+            <div class="mapPage text-center">
+                <h5 class="card-title">So how are we getting there?</h5>
+                <p class="card-text">
+                    <div id="parnetMapContainer" class="map">
+                        <div class="row">
+                            <div id="results-container" class="col-sm-6">
+                                <iframe id="map_frame" width="600" height="410" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw
+                                &origin=Portland+Oregon&destination=Seattle+Washington" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+                <button type="button" id="subscribe" class="btn btn-light btn-lg" data-toggle="modal" data-target="#exampleModal">Subscribe</button>
             </div>
         </div>
+
     </div>
-    <!------------------------------MODAL---------------------------------------------------->
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-        </button>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
             <div class="modal-header">
-              <h6 class="modal-title" id="exampleModalLabel">Hey <span class="userID_place"></span>! Sign up for the RoadtripperZzz <img id="modalFormIcon" src="assets/images/icon-camper.png"> newsletter!<br>
-            Share your email with us and get the latest on best places to hike and camp, all off the beaten-path.</h6>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+                <h6 class="modal-title" id="exampleModalLabel">Hey <span class="userID_place"></span>! Sign up for the RoadtripperZzz <img id="modalFormIcon" src="assets/images/icon-camper.png"> newsletter!<br>
+                Share your email with us and get the latest on best places to hike and camp, all off the beaten-path.</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div> 
             <div class="modal-body">
                 <form>
@@ -107,23 +125,24 @@
                         <div class="valid-feedback">Looks good!</div>
                     </div>
                     <div class="modal-footer">
-                        <button id="emailButton" type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                        <button id="emailButton" type="button" class="btn btn-dark" data-dismiss="modal">Send</button>
                     </div>
                 </form>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+    </div>
 
     <!-- JavaScript DOM Hide on Load -->
     <div class="loadingScreen">
         <img class="loadingGif" src="assets/images/loading.gif">
     </div>
 
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    
     <!-- Form -->
     <div id="form" class="container">
         <div class="row">
