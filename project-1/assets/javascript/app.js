@@ -187,7 +187,7 @@ $(document).ready(function () {
             $(".userID_place").text(newUser);
 
             $(".finalMainHeader").text("We got you " + newUser)
-        })
+        });
 
     });
 
