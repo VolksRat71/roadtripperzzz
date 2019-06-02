@@ -20,7 +20,7 @@ $(document).ready(function () {
     var lastName = "";
     var email = "";
     var city = "";
-    var state = "";
+    var state = ""; 
 
     // audio controls
     $(document).on("click", "#playBtn", function () {
@@ -82,7 +82,7 @@ $(document).ready(function () {
             }).then(function (response){
                 console.log(response);
                 console.log(response.daily.data);
-                $("#forecast-container").append("<h4>" + response.daily.summary + "</h4>") 
+                $("#text-results-container").append("<h4>" + response.daily.summary + "</h4>") 
             })
         }
 
@@ -99,7 +99,7 @@ $(document).ready(function () {
             $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
             $('#image').attr("src",randomResult.image)
             
-            var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+city+state+"&destination="+randomResult.place
+            var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+userState+"&destination="+randomResult.place
 
 
             $('#results-container').show();
@@ -204,7 +204,7 @@ $(document).ready(function () {
             lati: "45.3736", 
             longi: "-121.6960",
             terrain: "Forest",
-            description: "Mount Hood is located about 50 miles (80 km) east-southeast of Portland, on the border between Clackamas and Hood River counties. In addition to being Oregon's highest mountain, it is one of the loftiest mountains in the nation based on its prominence.",
+            description: "It is located about 50 miles (80 km) east-southeast of Portland, on the border between Clackamas and Hood River counties. In addition to being Oregon's highest mountain, it is one of the loftiest mountains in the nation based on its prominence.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.3735,-121.6959/us12/en.js?width=100%&height=350&title=Mount Hood&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: './assets/images/locationImages/Mount Hood.jpg'
 
@@ -225,7 +225,7 @@ $(document).ready(function () {
             lati: "44.6615",
             longi:"-120.2731",
             terrain: "Desert",
-            description: "The Painted Hills are one of the three units of the John Day Fossil Beds National Monument, located in Wheeler County, Oregon.Painted Hills is named after the colorful layers of its hills corresponding to various geological eras, formed when the area was an ancient river floodplain.",
+            description: "is one of the three units of the John Day Fossil Beds National Monument, located in Wheeler County, Oregon.Painted Hills is named after the colorful layers of its hills corresponding to various geological eras, formed when the area was an ancient river floodplain.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/44.6476,-120.2607/us12/en.js?width=100%&height=350&title=Painted Hills&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: './assets/images/locationImages/Painted Hills.jpg'
         },
@@ -234,7 +234,7 @@ $(document).ready(function () {
             lati: "44.3682",
             longi: "-121.1406",
             terrain: "Desert",
-            description: "Smith Rock is an American state park located in central Oregon's High Desert near the communities of Redmond and Terrebonne. Its sheer cliffs of tuff and basalt are ideal for rock climbing of all difficulty levels. Smith Rock is generally considered the birthplace of modern American sport climbing, and is host to cutting-edge climbing routes. It is popular for sport climbing, traditional climbing, multi-pitch climbing, and bouldering.",
+            description: "is an American state park located in central Oregon's High Desert near the communities of Redmond and Terrebonne. Its sheer cliffs of tuff and basalt are ideal for rock climbing of all difficulty levels. Smith Rock is generally considered the birthplace of modern American sport climbing, and is host to cutting-edge climbing routes. It is popular for sport climbing, traditional climbing, multi-pitch climbing, and bouldering.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/44.3638,-121.1466/us12/en.js?width=100%&height=350&title= smith rock, oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: './assets/images/locationImages/Smith Rock.jpg'
 
@@ -244,7 +244,7 @@ $(document).ready(function () {
             lati: "42.1946",
             longi: "-122.7095",
             terrain: "City",
-            description: "Ashland is a city in Oregon with a poplulation estimated at 21,000, home to Southern Oregon University and the infamous Shakespeare festival.Enjoy the arts, food, and liverl culture of this awesome city!",
+            description: "is a city in Oregon with a poplulation estimated at 21,000, home to Southern Oregon University and the infamous Shakespeare festival.Enjoy the arts, food, and liverl culture of this awesome city!",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/42.1972,-122.7154/us12/en.js?width=100%&height=350&title=Ashland, or&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: './assets/images/locationImages/Ashland.jpg'
 
@@ -264,7 +264,7 @@ $(document).ready(function () {
             lati: "45.5155",
             longi: "-122.6793",
             terrain: "Large city",
-            description: "Portland is the largest city in the state of Oregon and has approximately 2.4 million people that live in the Portland metropolitan statistical.  Portland is home to the NBA Trail Blazers, a breadth of art and ServiceUIFrameContext, and plenty of outdoor advenrtures.",
+            description: "is the largest city in the U.S. state of Oregon and has approximately 2.4 million people that live in the Portland metropolitan statistical.  Portland is home to the NBA Trail Blazers, a breadth of art and ServiceUIFrameContext, and plenty of outdoor advenrtures.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.5202,-122.6742/us12/en.js?width=100%&height=350&title=Portland, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: './assets/images/locationImages/Portland.jpg'
 
@@ -297,7 +297,7 @@ $(document).ready(function () {
             lati: "44.7472",
             longi: "-122.0637",
             terrain: "Coast",
-            description: "Devil's Punch Bowl is along the beautiful Oregon Coast. It is centered on a large bowl naturally carved in a rock headland which is partially open to the Pacific Ocean.",
+            description: "Along the beautiful Oregon Coast. It is centered on a large bowl naturally carved in a rock headland which is partially open to the Pacific Ocean.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/43.7474,-118.0841/us12/en.js?width=100%&height=350&title=Devils Punch Bowl, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: './assets/images/locationImages/Devils Punch Bowl.jpg'
 
@@ -307,7 +307,7 @@ $(document).ready(function () {
             lati: "45.5762",
             longi: "-122.1158",
             terrain: "Forest",
-            description: "Multnomah Falls are two consecutive waterfalls & beautiful hiking with a bridge along the Columbia Gorge. Visit the Multnomah Falls lodge built in 1925.",
+            description: "Two consecutive waterfalls & beautiful hiking with a bridge along the Columbia Gorge. Visit the Multnomah Falls lodge built in 1925.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.5759,-122.1155/us12/en.js?width=100%&height=350&title=Multnomah Falls, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
             image: './assets/images/locationImages/Multnomah Falls.jpg'
 
