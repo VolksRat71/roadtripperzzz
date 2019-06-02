@@ -10,11 +10,11 @@ body{
 }
 
 #finalPage{
-    margin-top: 115px;
+    margin-top: 85px;
 }
 
 #form{
-    margin-top: 53px;
+    margin-top: 85px;
     margin-bottom: 15px;
 }
 
@@ -35,22 +35,15 @@ form{
 
  .loadingGif{
     margin-top: 85px;
-    margin-left:30%;
-    height: 40%;
-    width: 40%;
+    margin-left:35%;
+    height:32%;
+    width: 32%;
     border-radius: 50%;
  }
 
 .quoteCard{
     margin-top: 10px;
 }
-
- #finalPage{
-     background-color: white;
-     border: 1px solid black;
-     color: blue;
-     padding:auto;
- }
 
  #text-col{
      background-color: red;
@@ -67,10 +60,6 @@ form{
  #image{
      max-height: 100%;
      max-width: 100%;
- }
-
- #text-results-container{
-     padding-bottom: 20px;
  }
 
  /* Modal Style */
@@ -95,11 +84,34 @@ form{
     padding-bottom: 0;
 }
 
-#emailButton {
-    background-color: rgb(41, 43, 44);
-    color: white;
-}
-
 #emailButton.btn-primary {
     border-color: white;
+}
+
+#card-button{
+    display: flex; 
+    justify-content: center;
+}
+
+.lastButtons{
+    display: flex; 
+    justify-content: center;
+}
+
+iframe{
+    margin-left: 50%;
+    border-radius: 5px;
+}
+
+.finalMainHeader{
+    color: white;
+    text-align: center;
+}
+
+.final{
+    padding: 10px;
+}
+
+#subscribe{
+    margin-bottom: 5px;
 }
