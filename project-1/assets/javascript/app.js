@@ -126,6 +126,8 @@ $(document).ready(function () {
             $('#results-container').show();
             $('#map_frame').attr("src",mapUrl);
             // console.log(mapUrl);
+            $('#results-title').text("Your Roadtrip Destination:" + " " + randomResult.place+"!")
+            $('#results-card-image').attr("src",randomResult.image)
         }
         renderVacation();
         $('#form').hide();
