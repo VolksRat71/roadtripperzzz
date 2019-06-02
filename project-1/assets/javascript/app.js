@@ -105,11 +105,7 @@ $(document).ready(function () {
             }).then(function (response){
                 console.log(response);
                 console.log(response.daily.data);
-<<<<<<< HEAD
-                $("#text-results-container").append("<h4>" + response.daily.summary + "</h4>") 
-=======
                 $("#text-results-container").append("<p>" + response.daily.summary + "</p>") 
->>>>>>> f2b10f12506684878103f362738ab97aceb4bd4c
             })
         }
 
@@ -124,7 +120,7 @@ $(document).ready(function () {
             $("#descriptionContent").text("Description:" + " " + randomResult.description);
             $("#weatherContent").html("The Forecast:" + " " + randomResult.weather);
             
-            var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+userCity+userState+"&destination="+randomResult.place
+            var mapUrl = "https://www.google.com/maps/embed/v1/directions?key=AIzaSyD-_N_JbKdFWR_zfJ_3RlDbIKs2pIY0-Nw&origin="+city+state+"&destination="+randomResult.place
 
 
             $('#results-container').show();
