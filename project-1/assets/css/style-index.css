@@ -10,11 +10,11 @@ body{
 }
 
 #finalPage{
-    margin-top: 115px;
+    margin-top: 85px;
 }
 
 #form{
-    margin-top: 90px;
+    margin-top: 85px;
     margin-bottom: 15px;
 }
 
@@ -26,24 +26,29 @@ form{
     padding: 10px;
 }
 
-#myCarousel img {
+.carousel-inner img {
+    width: auto;
+    height: 320px;
+    max-height: 320px;
     border-radius: 5px;
-    width: auto;  
-    height: 320px;   
 }
+
  .loadingGif{
     margin-top: 85px;
-    margin-left:30%;
-    height: 40%;
-    width: 40%;
+    margin-left:35%;
+    height:32%;
+    width: 32%;
     border-radius: 50%;
  }
 
- #results-container {
-     background-color: white;
-     border: 1px solid black;
-     color: blue;
-     padding:auto;
+.quoteCard{
+    margin-top: 10px;
+}
+
+ #text-col{
+     background-color: red;
+     max-height: 100%;
+     
  }
 
  #authenticate{
@@ -52,7 +57,65 @@ form{
      float: right;
  }
 
- #map_frame{
-     margin:25px;
+ #image{
+     max-height: 100%;
+     max-width: 100%;
  }
 
+ /* Modal Style */
+ #modalFormIcon {
+    width: 10%;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding-bottom: 0;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+.modal-footer {
+    border-top: none;
+    padding-bottom: 0;
+}
+
+#emailButton.btn-primary {
+    border-color: white;
+}
+
+#card-button{
+    display: flex; 
+    justify-content: center;
+}
+
+.lastButtons{
+    display: flex; 
+    justify-content: center;
+}
+
+iframe{
+    margin-left: 50%;
+    border-radius: 5px;
+}
+
+.finalMainHeader{
+    color: white;
+    text-align: center;
+}
+
+.final{
+    padding: 10px;
+}
+
+#subscribe{
+    margin-bottom: 5px;
+}
+#results-card-image {
+    max-height: 60%;
+     max-width: 60%;
+}
