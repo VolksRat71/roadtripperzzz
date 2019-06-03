@@ -310,7 +310,7 @@ $(document).ready(function () {
         {
             place: "Haystack Rock, Cannon Beach",
             lati: "43.0861",
-            longi: "",
+            longi: "-123.9686",
             terrain: "Beach",
             description: "Visitors to Haystack Rock can view many species of marine wildlife in their natural habitat during low tide.",
             weather: "<script type='text/javascript' src='https://darksky.net/widget/default/45.8844,-123.9684/us12/en.js?width=100%&height=350&title=Haystack Rock, Cannon Beach, Oregon&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes'></script>",
