@@ -2,7 +2,6 @@
 $(document).ready(function () {
 
     // hide page functions upon load
-    
     $("#results-container").hide();
     $(".loadingScreen").hide();
     $("#playBtn").hide();
@@ -29,13 +28,11 @@ $(document).ready(function () {
     $(document).on("click", "#playBtn", function () {
         event.preventDefault();
         audio.play();
-        // console.log("Play Audio");
     });
 
     $(document).on("click", "#pauseBtn", function () {
         event.preventDefault();
         audio.pause();
-        // console.log("Pause Audio");
     });
 
     $(document).on("click", "#checkBox", function (){
@@ -89,16 +86,14 @@ $(document).ready(function () {
             setInterval(function(){$(".loadingScreen").hide(); $("#pauseBtn").show(); $("#playBtn").show(); clearInterval(); $("#finalPage").show();}, 14600);
         };
 
-        // weather API stuff DO NOT DELERTE ///
+        // weather API stuff
         var location= locations[Math.floor(Math.random()* locations.length)];
         var lati= location.lati;
         var longi= location.longi;
-        // console.log(location, lati, longi);
         function weatherReport() {
             var apiKey       = '998f56179b95a092c3fac99f4273aaab',
             url          = 'https://api.darksky.net/forecast/'
             queryURL     = "https://cors-anywhere.herokuapp.com/" + url + apiKey + "/" + lati + "," + longi;
-            // console.log(queryURL);
             $.ajax({
                 url: queryURL,
                 method: "GET"
@@ -111,10 +106,9 @@ $(document).ready(function () {
 
         weatherReport()
 
-// this generates a random location //
+        // this generates a random location 
         var renderVacation= function(){
             randomResult= locations[Math.floor(Math.random()* locations.length)];
-            // console.log(randomResult);
             $("#placeContent").text("Your Roadtrip Destination:" + " " + randomResult.place);
             $("#terrainContent").text("The Terrain:" + " " + randomResult.terrain);
             $("#descriptionContent").text("Description:" + " " + randomResult.description);
@@ -125,6 +119,7 @@ $(document).ready(function () {
 
             $('#results-container').show();
             $('#map_frame').attr("src",mapUrl);
+
             // console.log(mapUrl);
             $('#results-title').text("Your Roadtrip Destination:" + " " + randomResult.place+"!")
             $('#results-card-image').attr("src",randomResult.image)
@@ -132,9 +127,7 @@ $(document).ready(function () {
         renderVacation();
         $('#form').hide();
         $('#parnetMapContainer').show();
-    
-    
-        
+     
         //FIREBASE
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -146,6 +139,7 @@ $(document).ready(function () {
             messagingSenderId: "359911792247",
             appId: "1:359911792247:web:35b92d2cc78970ac"
         };
+        
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
 
