@@ -115,3 +115,7 @@ iframe{
 #subscribe{
     margin-bottom: 5px;
 }
+#results-card-image {
+    max-height: 60%;
+     max-width: 60%;
+}
