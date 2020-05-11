@@ -1,0 +1,121 @@
+body{
+    background-image: url(../../assets/images/woodFloor.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.navbar{
+    height: 74px;
+}
+
+#finalPage{
+    margin-top: 85px;
+}
+
+#form{
+    margin-top: 85px;
+    margin-bottom: 15px;
+}
+
+.btn{
+    margin-left: 10px;
+}
+
+form{
+    padding: 10px;
+}
+
+.carousel-inner img {
+    width: auto;
+    height: 320px;
+    max-height: 320px;
+    border-radius: 5px;
+}
+
+ .loadingGif{
+    margin-top: 85px;
+    margin-left:35%;
+    height:32%;
+    width: 32%;
+    border-radius: 50%;
+ }
+
+.quoteCard{
+    margin-top: 10px;
+}
+
+ #text-col{
+     background-color: red;
+     max-height: 100%;
+     
+ }
+
+ #authenticate{
+     color:red;
+     font-size: 12px;
+     float: right;
+ }
+
+ #image{
+     max-height: 100%;
+     max-width: 100%;
+ }
+
+ /* Modal Style */
+ #modalFormIcon {
+    width: 10%;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding-bottom: 0;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+.modal-footer {
+    border-top: none;
+    padding-bottom: 0;
+}
+
+#emailButton.btn-primary {
+    border-color: white;
+}
+
+#card-button{
+    display: flex; 
+    justify-content: center;
+}
+
+.lastButtons{
+    display: flex; 
+    justify-content: center;
+}
+
+iframe{
+    margin-left: 50%;
+    border-radius: 5px;
+}
+
+.finalMainHeader{
+    color: white;
+    text-align: center;
+}
+
+.final{
+    padding: 10px;
+}
+
+#subscribe{
+    margin-bottom: 5px;
+}
+#results-card-image {
+    max-height: 60%;
+     max-width: 60%;
+}
