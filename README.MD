@@ -1,5 +1,11 @@
-Title: "ROADTRIPPERZzZ" MVP Groups members: Sam, Stesha, Cam, Nate
+# RoadTripperZzz
 
-As a user I want to go on a quick roadtrip in Oregon and I want it to be a surprise.
-As a user, I want to be able to access a surprise destination in Oregon with map coordinates and current weather.
-As a user, I am looking for a surprise adventure in the Oregon area with links to the location and local weather so that I don’t have to consider these things and plan it myself.
+<p align="center">
+  <img height="300" src="https://raw.githubusercontent.com/VolksRat71/project-1/master/readme_img/img.jpg">
+</p>
+
+Application written with simple JS, HTML, CSS using libraries Bootstrap and jQuery to interface with API's and give you a road trip idea... Map, Weather included. *Don't forget to sign the gues book
+
+## Usage
+
+Simply click here and fill out all of the fields!
