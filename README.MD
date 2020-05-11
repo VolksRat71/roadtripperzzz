@@ -8,4 +8,4 @@ Application written with simple JS, HTML, CSS using libraries Bootstrap and jQue
 
 ## Usage
 
-Simply click here and fill out all of the fields!
+Simply click [here](https://volksrat71.github.io/roadtripperzzz/) and fill out all of the fields!
